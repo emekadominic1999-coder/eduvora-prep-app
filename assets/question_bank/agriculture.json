@@ -1,0 +1,294 @@
+{
+  "subject": "agriculture",
+  "papers": [
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 45,
+      "questions": [
+        {
+          "id": "agr-w23-01",
+          "topic": "Introduction",
+          "text": "Agriculture that is practised mainly to feed the farmer and their family is described as",
+          "options": ["commercial", "subsistence", "plantation", "mixed"],
+          "answer": 1,
+          "explanation": "Subsistence farming produces little or no surplus for sale, unlike commercial agriculture."
+        },
+        {
+          "id": "agr-w23-02",
+          "topic": "Soil science",
+          "text": "The soil type that retains water best but is poorly drained is",
+          "options": ["sandy soil", "loamy soil", "clayey soil", "gravelly soil"],
+          "answer": 2,
+          "explanation": "Clay particles are very fine, giving small pore spaces that hold water and slow drainage."
+        },
+        {
+          "id": "agr-w23-03",
+          "topic": "Soil science",
+          "text": "The best soil for the cultivation of most arable crops is",
+          "options": ["clay", "sand", "loam", "laterite"],
+          "answer": 2,
+          "explanation": "Loam balances sand, silt and clay, giving good drainage, aeration and nutrient retention."
+        },
+        {
+          "id": "agr-w23-04",
+          "topic": "Soil fertility",
+          "text": "The nutrient element that promotes vegetative growth and gives leaves a deep green colour is",
+          "options": ["nitrogen", "phosphorus", "potassium", "calcium"],
+          "answer": 0,
+          "explanation": "Nitrogen is a constituent of chlorophyll and protein; its deficiency causes chlorosis and stunting."
+        },
+        {
+          "id": "agr-w23-05",
+          "topic": "Soil fertility",
+          "text": "The practice of growing legumes in rotation with cereals improves soil fertility because legumes",
+          "options": [
+            "have deep tap roots",
+            "fix atmospheric nitrogen through root nodules",
+            "shade the soil surface",
+            "require little water"
+          ],
+          "answer": 1,
+          "explanation": "Rhizobium bacteria in the nodules convert atmospheric nitrogen into a form plants can use."
+        },
+        {
+          "id": "agr-w23-06",
+          "topic": "Crop production",
+          "text": "Maize is best classified as",
+          "options": [
+            "a leguminous crop",
+            "a cereal crop",
+            "a tuber crop",
+            "a beverage crop"
+          ],
+          "answer": 1,
+          "explanation": "Cereals are grasses grown for their edible grains; maize, rice, sorghum and millet belong here."
+        },
+        {
+          "id": "agr-w23-07",
+          "topic": "Crop production",
+          "text": "The method of propagating cassava is by",
+          "options": ["seeds", "stem cuttings", "suckers", "bulbs"],
+          "answer": 1,
+          "explanation": "Mature stem cuttings of about 25 cm are planted at an angle or horizontally."
+        },
+        {
+          "id": "agr-w23-08",
+          "topic": "Crop protection",
+          "text": "A chemical used to control weeds is called",
+          "options": ["an insecticide", "a herbicide", "a fungicide", "a rodenticide"],
+          "answer": 1,
+          "explanation": "Herbicides may be selective or non-selective, and contact or systemic in action."
+        },
+        {
+          "id": "agr-w23-09",
+          "topic": "Animal production",
+          "text": "The gestation period of a cow is approximately",
+          "options": ["3 months", "5 months", "9 months", "12 months"],
+          "answer": 2,
+          "explanation": "A cow carries her calf for about 280 days, roughly nine months."
+        },
+        {
+          "id": "agr-w23-10",
+          "topic": "Animal production",
+          "text": "Ruminant animals are able to digest cellulose because of",
+          "options": [
+            "a very long small intestine",
+            "micro-organisms in the rumen",
+            "strong gizzard muscles",
+            "bile from the liver"
+          ],
+          "answer": 1,
+          "explanation": "Bacteria and protozoa in the rumen ferment cellulose into volatile fatty acids the animal can absorb."
+        },
+        {
+          "id": "agr-w23-11",
+          "topic": "Animal health",
+          "text": "Newcastle disease is a viral disease that affects",
+          "options": ["cattle", "poultry", "goats", "pigs"],
+          "answer": 1,
+          "explanation": "It causes high mortality in chickens and is controlled mainly by vaccination."
+        },
+        {
+          "id": "agr-w23-12",
+          "topic": "Farm mechanisation",
+          "text": "The implement used for the primary tillage of land is the",
+          "options": ["harrow", "plough", "ridger", "planter"],
+          "answer": 1,
+          "explanation": "The plough cuts and inverts the soil first; the harrow then breaks the clods in secondary tillage."
+        },
+        {
+          "id": "agr-w23-13",
+          "topic": "Agricultural economics",
+          "text": "A major problem of agricultural marketing in Nigeria is",
+          "options": [
+            "excess storage facilities",
+            "poor rural road networks and inadequate storage",
+            "too many extension officers",
+            "uniform pricing across the country"
+          ],
+          "answer": 1,
+          "explanation": "Bad roads and weak storage cause heavy post-harvest losses and depress farm-gate prices."
+        },
+        {
+          "id": "agr-w23-14",
+          "topic": "Agricultural extension",
+          "text": "The primary role of an agricultural extension officer is to",
+          "options": [
+            "sell fertiliser to farmers",
+            "teach farmers improved practices",
+            "collect taxes from farmers",
+            "buy produce on behalf of government"
+          ],
+          "answer": 1,
+          "explanation": "Extension links research to the farm, carrying improved techniques to the farmer and problems back to researchers."
+        }
+      ]
+    },
+    {
+      "body": "NECO",
+      "year": 2023,
+      "diet": "June/July",
+      "duration": 40,
+      "questions": [
+        {
+          "id": "agr-n23-01",
+          "topic": "Farming systems",
+          "text": "The system of farming in which crops and animals are raised on the same farm is",
+          "options": [
+            "mixed cropping",
+            "mixed farming",
+            "monocropping",
+            "crop rotation"
+          ],
+          "answer": 1,
+          "explanation": "Mixed farming lets animal manure fertilise crops while crop residues feed the animals."
+        },
+        {
+          "id": "agr-n23-02",
+          "topic": "Farming systems",
+          "text": "Growing two or more crops on the same piece of land at the same time is",
+          "options": ["mixed cropping", "mixed farming", "shifting cultivation", "fallowing"],
+          "answer": 0,
+          "explanation": "Mixed cropping spreads risk and makes fuller use of soil nutrients and sunlight."
+        },
+        {
+          "id": "agr-n23-03",
+          "topic": "Soil science",
+          "text": "Soil pH is a measure of the",
+          "options": [
+            "organic matter content of soil",
+            "acidity or alkalinity of soil",
+            "water-holding capacity of soil",
+            "texture of soil"
+          ],
+          "answer": 1,
+          "explanation": "Most crops do best between pH 6 and 7; liming raises pH on acid soils."
+        },
+        {
+          "id": "agr-n23-04",
+          "topic": "Soil conservation",
+          "text": "Terracing is a soil conservation practice used mainly to",
+          "options": [
+            "increase soil temperature",
+            "reduce erosion on steep slopes",
+            "kill soil pests",
+            "raise the water table"
+          ],
+          "answer": 1,
+          "explanation": "Terraces break a long slope into level steps, slowing run-off and reducing soil loss."
+        },
+        {
+          "id": "agr-n23-05",
+          "topic": "Crop production",
+          "text": "Cocoa, rubber and oil palm are best described as",
+          "options": [
+            "arable crops",
+            "permanent or tree crops",
+            "cover crops",
+            "cereal crops"
+          ],
+          "answer": 1,
+          "explanation": "They occupy the land for many years and yield over long productive lives."
+        },
+        {
+          "id": "agr-n23-06",
+          "topic": "Crop protection",
+          "text": "The weevil that attacks stored grains is best controlled by",
+          "options": [
+            "planting early",
+            "proper drying and fumigation of the store",
+            "applying nitrogenous fertiliser",
+            "increasing plant spacing"
+          ],
+          "answer": 1,
+          "explanation": "Low moisture content and fumigation of clean, airtight stores prevent weevil infestation."
+        },
+        {
+          "id": "agr-n23-07",
+          "topic": "Animal production",
+          "text": "The male reproductive organ of a farm animal that produces spermatozoa is the",
+          "options": ["scrotum", "testis", "epididymis", "vas deferens"],
+          "answer": 1,
+          "explanation": "The testis produces both spermatozoa and the hormone testosterone."
+        },
+        {
+          "id": "agr-n23-08",
+          "topic": "Animal nutrition",
+          "text": "Feed given to animals to supply energy is mainly rich in",
+          "options": ["protein", "carbohydrate", "minerals", "vitamins"],
+          "answer": 1,
+          "explanation": "Maize, cassava and sorghum are energy concentrates; groundnut cake and fishmeal supply protein."
+        },
+        {
+          "id": "agr-n23-09",
+          "topic": "Fisheries",
+          "text": "Fish farming in constructed ponds is known as",
+          "options": ["apiculture", "aquaculture", "sericulture", "floriculture"],
+          "answer": 1,
+          "explanation": "Aquaculture is the controlled rearing of aquatic organisms; apiculture is beekeeping."
+        },
+        {
+          "id": "agr-n23-10",
+          "topic": "Forestry",
+          "text": "Afforestation refers to",
+          "options": [
+            "cutting down trees for timber",
+            "planting trees where none grew before",
+            "burning bush before planting",
+            "grazing cattle in a forest"
+          ],
+          "answer": 1,
+          "explanation": "Afforestation establishes new forest; reforestation replants an area that was previously forested."
+        },
+        {
+          "id": "agr-n23-11",
+          "topic": "Agricultural economics",
+          "text": "Land, labour, capital and management in farming are collectively known as",
+          "options": [
+            "farm inputs or factors of production",
+            "farm records",
+            "farm budgets",
+            "farm structures"
+          ],
+          "answer": 0,
+          "explanation": "These four resources must be combined efficiently for profitable farm production."
+        },
+        {
+          "id": "agr-n23-12",
+          "topic": "Farm records",
+          "text": "The farm record that shows income and expenditure over a period is the",
+          "options": [
+            "inventory record",
+            "financial record",
+            "production record",
+            "labour record"
+          ],
+          "answer": 1,
+          "explanation": "Financial records are the basis for computing profit or loss and for obtaining credit."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,310 @@
+{
+  "subject": "biology",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 27,
+      "questions": [
+        {
+          "id": "bio-j24-01",
+          "topic": "Cell biology",
+          "text": "The organelle responsible for the release of energy during respiration is the",
+          "options": ["ribosome", "mitochondrion", "lysosome", "Golgi apparatus"],
+          "answer": 1,
+          "explanation": "Mitochondria carry the enzymes for aerobic respiration and produce most of the cell's ATP."
+        },
+        {
+          "id": "bio-j24-02",
+          "topic": "Transport",
+          "text": "Which component of blood is mainly responsible for defence against infection?",
+          "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+          "answer": 1,
+          "explanation": "Leucocytes engulf pathogens and produce antibodies; red cells carry oxygen and platelets aid clotting."
+        },
+        {
+          "id": "bio-j24-03",
+          "topic": "Excretion",
+          "text": "Ultrafiltration in the mammalian kidney takes place in the",
+          "options": [
+            "loop of Henle",
+            "glomerulus and Bowman's capsule",
+            "collecting duct",
+            "distal convoluted tubule"
+          ],
+          "answer": 1,
+          "explanation": "High blood pressure in the glomerulus forces small molecules into the Bowman's capsule, forming the glomerular filtrate."
+        },
+        {
+          "id": "bio-j24-04",
+          "topic": "Nutrition",
+          "text": "Photosynthesis in green plants takes place mainly in the",
+          "options": ["vacuole", "chloroplast", "nucleus", "cell wall"],
+          "answer": 1,
+          "explanation": "Chloroplasts contain chlorophyll, which traps light energy for the manufacture of carbohydrates."
+        },
+        {
+          "id": "bio-j24-05",
+          "topic": "Genetics",
+          "text": "A cross between two heterozygous tall pea plants (Tt × Tt) produces offspring in the phenotypic ratio",
+          "options": ["1 : 1", "1 : 2 : 1", "3 : 1", "9 : 3 : 3 : 1"],
+          "answer": 2,
+          "explanation": "The genotypic ratio is 1TT : 2Tt : 1tt, but since T is dominant the phenotypes appear as 3 tall : 1 short."
+        },
+        {
+          "id": "bio-j24-06",
+          "topic": "Transport",
+          "text": "The tissue that conducts water and mineral salts in flowering plants is the",
+          "options": ["phloem", "xylem", "cambium", "cortex"],
+          "answer": 1,
+          "explanation": "Xylem vessels transport water and dissolved minerals upwards; phloem translocates manufactured food."
+        },
+        {
+          "id": "bio-j24-07",
+          "topic": "Health and disease",
+          "text": "Malaria parasites are transmitted to humans by the",
+          "options": [
+            "male Anopheles mosquito",
+            "female Anopheles mosquito",
+            "female Culex mosquito",
+            "tsetse fly"
+          ],
+          "answer": 1,
+          "explanation": "Only the female Anopheles takes a blood meal and so transmits Plasmodium."
+        },
+        {
+          "id": "bio-j24-08",
+          "topic": "Hormonal coordination",
+          "text": "Which hormone lowers the level of glucose in the blood?",
+          "options": ["Glucagon", "Insulin", "Adrenaline", "Thyroxine"],
+          "answer": 1,
+          "explanation": "Insulin from the beta cells of the pancreas promotes the conversion of glucose to glycogen in the liver."
+        },
+        {
+          "id": "bio-j24-09",
+          "topic": "Nutrition",
+          "text": "Prolonged deficiency of ascorbic acid in the diet results in",
+          "options": ["rickets", "scurvy", "beri-beri", "pellagra"],
+          "answer": 1,
+          "explanation": "Ascorbic acid is vitamin C, and its deficiency causes scurvy, marked by bleeding gums and slow wound healing."
+        },
+        {
+          "id": "bio-j24-10",
+          "topic": "Digestion",
+          "text": "The enzyme in saliva acts on",
+          "options": ["proteins", "starch", "fats", "vitamins"],
+          "answer": 1,
+          "explanation": "Salivary amylase (ptyalin) hydrolyses starch to maltose in the mouth."
+        },
+        {
+          "id": "bio-j24-11",
+          "topic": "Classification",
+          "text": "The class of vertebrates whose bodies are covered with feathers is",
+          "options": ["Mammalia", "Reptilia", "Aves", "Amphibia"],
+          "answer": 2,
+          "explanation": "Feathers, a beak without teeth and hollow bones are diagnostic features of Aves."
+        },
+        {
+          "id": "bio-j24-12",
+          "topic": "Ecology",
+          "text": "In a food chain, green plants occupy the trophic level of",
+          "options": [
+            "primary consumers",
+            "producers",
+            "secondary consumers",
+            "decomposers"
+          ],
+          "answer": 1,
+          "explanation": "Green plants manufacture their own food and so form the first trophic level as producers."
+        },
+        {
+          "id": "bio-j24-13",
+          "topic": "Genetics",
+          "text": "In humans, the sex of an offspring is determined by the",
+          "options": [
+            "ovum of the mother",
+            "spermatozoon of the father",
+            "number of chromosomes in the zygote",
+            "hormones of the mother"
+          ],
+          "answer": 1,
+          "explanation": "The ovum always carries X, while the sperm may carry X or Y, so the father's gamete decides the sex."
+        },
+        {
+          "id": "bio-j24-14",
+          "topic": "Transport in plants",
+          "text": "The loss of water vapour from the aerial parts of a plant is called",
+          "options": ["guttation", "transpiration", "translocation", "osmosis"],
+          "answer": 1,
+          "explanation": "Transpiration occurs mainly through the stomata and creates the pull that draws water up the xylem."
+        },
+        {
+          "id": "bio-j24-15",
+          "topic": "Reproduction",
+          "text": "Binary fission is the method of reproduction in",
+          "options": ["Amoeba", "Hydra", "Yeast", "Spirogyra"],
+          "answer": 0,
+          "explanation": "Amoeba divides into two equal daughter cells by binary fission; Hydra buds and yeast reproduces by budding."
+        },
+        {
+          "id": "bio-j24-16",
+          "topic": "Evolution",
+          "text": "The theory of evolution by natural selection was proposed by",
+          "options": [
+            "Gregor Mendel",
+            "Charles Darwin",
+            "Jean-Baptiste Lamarck",
+            "Louis Pasteur"
+          ],
+          "answer": 1,
+          "explanation": "Darwin argued that organisms best adapted to their environment survive and pass on their traits."
+        },
+        {
+          "id": "bio-j24-17",
+          "topic": "Ecology",
+          "text": "A group of organisms of the same species living together in a given area is called a",
+          "options": ["community", "population", "ecosystem", "biome"],
+          "answer": 1,
+          "explanation": "A population is one species; a community is all the populations in that habitat."
+        },
+        {
+          "id": "bio-j24-18",
+          "topic": "Respiration",
+          "text": "The end products of anaerobic respiration in muscle cells are",
+          "options": [
+            "carbon(IV) oxide and water",
+            "lactic acid and energy",
+            "ethanol and carbon(IV) oxide",
+            "glucose and oxygen"
+          ],
+          "answer": 1,
+          "explanation": "In oxygen debt, glucose is broken down incompletely to lactic acid with a small release of energy."
+        }
+      ]
+    },
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 45,
+      "questions": [
+        {
+          "id": "bio-w23-01",
+          "topic": "Excretion",
+          "text": "The excretory structures of flatworms are the",
+          "options": ["nephridia", "flame cells", "Malpighian tubules", "contractile vacuoles"],
+          "answer": 1,
+          "explanation": "Flame cells remove excess water and nitrogenous waste in Platyhelminthes."
+        },
+        {
+          "id": "bio-w23-02",
+          "topic": "Sense organs",
+          "text": "The part of the eye that controls the amount of light entering it is the",
+          "options": ["cornea", "iris", "retina", "lens"],
+          "answer": 1,
+          "explanation": "The iris adjusts the size of the pupil in bright and dim conditions."
+        },
+        {
+          "id": "bio-w23-03",
+          "topic": "Food tests",
+          "text": "A purple colouration with Biuret reagent indicates the presence of",
+          "options": ["starch", "reducing sugar", "protein", "lipid"],
+          "answer": 2,
+          "explanation": "Biuret reagent detects peptide bonds and turns purple in the presence of protein."
+        },
+        {
+          "id": "bio-w23-04",
+          "topic": "Transport",
+          "text": "The blood vessel that carries oxygenated blood from the lungs to the heart is the",
+          "options": ["pulmonary artery", "pulmonary vein", "aorta", "vena cava"],
+          "answer": 1,
+          "explanation": "The pulmonary vein is the exception among veins: it carries oxygenated blood to the left atrium."
+        },
+        {
+          "id": "bio-w23-05",
+          "topic": "Respiration",
+          "text": "Gaseous exchange in insects takes place through the",
+          "options": ["gills", "lungs", "spiracles and tracheae", "moist skin"],
+          "answer": 2,
+          "explanation": "Air enters through spiracles and is carried directly to the tissues by a network of tracheae and tracheoles."
+        },
+        {
+          "id": "bio-w23-06",
+          "topic": "Reproduction in plants",
+          "text": "Which of the following features adapts a seed for dispersal by wind?",
+          "options": [
+            "Hooks on the seed coat",
+            "A light seed with wing-like structures",
+            "A fleshy, brightly coloured fruit",
+            "An explosive pod"
+          ],
+          "answer": 1,
+          "explanation": "Light seeds with wings or parachutes of hairs are carried easily by air currents."
+        },
+        {
+          "id": "bio-w23-07",
+          "topic": "Reproduction",
+          "text": "An advantage of sexual reproduction over asexual reproduction is that it",
+          "options": [
+            "is faster",
+            "produces offspring identical to the parent",
+            "increases genetic variation in the offspring",
+            "requires only one parent"
+          ],
+          "answer": 2,
+          "explanation": "The fusion of gametes from two parents recombines genes, giving variation on which selection can act."
+        },
+        {
+          "id": "bio-w23-08",
+          "topic": "Ecology",
+          "text": "The bacterium found in the root nodules of leguminous plants is",
+          "options": ["Rhizobium", "Nitrosomonas", "Nitrobacter", "Clostridium"],
+          "answer": 0,
+          "explanation": "Rhizobium lives symbiotically in root nodules and fixes atmospheric nitrogen for the plant."
+        },
+        {
+          "id": "bio-w23-09",
+          "topic": "Transport in plants",
+          "text": "The rate of transpiration in plants is increased by",
+          "options": [
+            "high humidity and still air",
+            "low temperature and darkness",
+            "high temperature and moving air",
+            "waterlogged soil"
+          ],
+          "answer": 2,
+          "explanation": "Heat raises evaporation and wind removes the saturated air around the stomata, steepening the diffusion gradient."
+        },
+        {
+          "id": "bio-w23-10",
+          "topic": "Skeleton",
+          "text": "The bone of the upper arm in mammals is the",
+          "options": ["femur", "humerus", "radius", "tibia"],
+          "answer": 1,
+          "explanation": "The humerus articulates with the scapula at the shoulder and with the radius and ulna at the elbow."
+        },
+        {
+          "id": "bio-w23-11",
+          "topic": "Ecology",
+          "text": "The main role of decomposers in an ecosystem is to",
+          "options": [
+            "manufacture food for consumers",
+            "return nutrients to the soil",
+            "provide oxygen for plants",
+            "control the population of producers"
+          ],
+          "answer": 1,
+          "explanation": "Bacteria and fungi break down dead organic matter, releasing minerals that producers reuse."
+        },
+        {
+          "id": "bio-w23-12",
+          "topic": "Ecology",
+          "text": "The instrument used to measure relative humidity in a habitat is the",
+          "options": ["anemometer", "hygrometer", "barometer", "rain gauge"],
+          "answer": 1,
+          "explanation": "A hygrometer measures humidity; an anemometer measures wind speed and a barometer measures atmospheric pressure."
+        }
+      ]
+    }
+  ]
+}

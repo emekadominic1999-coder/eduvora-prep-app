@@ -1,0 +1,334 @@
+{
+  "subject": "geography",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 27,
+      "questions": [
+        {
+          "id": "geo-j24-01",
+          "topic": "The earth",
+          "text": "The rotation of the earth on its axis is responsible for",
+          "options": [
+            "the seasons",
+            "day and night",
+            "the varying length of the year",
+            "the tilt of the earth"
+          ],
+          "answer": 1,
+          "explanation": "One rotation every twenty-four hours brings each meridian into and out of sunlight."
+        },
+        {
+          "id": "geo-j24-02",
+          "topic": "The earth",
+          "text": "Lines of longitude are used mainly to determine",
+          "options": ["climate zones", "local time", "altitude", "rainfall totals"],
+          "answer": 1,
+          "explanation": "The earth turns 15° each hour, so every 15° of longitude represents one hour of time difference."
+        },
+        {
+          "id": "geo-j24-03",
+          "topic": "Map reading",
+          "text": "On a map of scale 1 : 50,000, a distance of 4 cm represents an actual distance of",
+          "options": ["0.5 km", "2 km", "5 km", "20 km"],
+          "answer": 1,
+          "explanation": "4 cm × 50,000 = 200,000 cm = 2 km."
+        },
+        {
+          "id": "geo-j24-04",
+          "topic": "Map reading",
+          "text": "Contour lines that are very close together on a map indicate",
+          "options": [
+            "a gentle slope",
+            "a steep slope",
+            "flat land",
+            "a depression"
+          ],
+          "answer": 1,
+          "explanation": "Closely spaced contours mean a large change in height over a short horizontal distance."
+        },
+        {
+          "id": "geo-j24-05",
+          "topic": "Rocks",
+          "text": "Rocks formed from the cooling and solidification of magma are",
+          "options": ["sedimentary", "igneous", "metamorphic", "organic"],
+          "answer": 1,
+          "explanation": "Granite and basalt are igneous rocks formed from molten material."
+        },
+        {
+          "id": "geo-j24-06",
+          "topic": "Landforms",
+          "text": "A landform produced by the deposition of sediment at the mouth of a river is a",
+          "options": ["delta", "meander", "gorge", "waterfall"],
+          "answer": 0,
+          "explanation": "The Niger Delta is a classic example, formed where the river loses velocity on entering the sea."
+        },
+        {
+          "id": "geo-j24-07",
+          "topic": "Climate",
+          "text": "The instrument used to measure atmospheric pressure is the",
+          "options": ["hygrometer", "barometer", "anemometer", "thermometer"],
+          "answer": 1,
+          "explanation": "A barometer measures pressure; falling pressure often signals approaching bad weather."
+        },
+        {
+          "id": "geo-j24-08",
+          "topic": "Climate",
+          "text": "The harmattan wind that affects West Africa between November and February blows from the",
+          "options": [
+            "Atlantic Ocean",
+            "Sahara Desert",
+            "Congo Basin",
+            "Indian Ocean"
+          ],
+          "answer": 1,
+          "explanation": "It is a dry, dusty north-easterly wind originating over the Sahara."
+        },
+        {
+          "id": "geo-j24-09",
+          "topic": "Vegetation",
+          "text": "The vegetation belt found in the extreme north of Nigeria is",
+          "options": [
+            "mangrove swamp",
+            "rainforest",
+            "Sudan savanna and Sahel",
+            "montane vegetation"
+          ],
+          "answer": 2,
+          "explanation": "Rainfall declines northwards, giving Sudan savanna and, at the far north-east, Sahel scrub."
+        },
+        {
+          "id": "geo-j24-10",
+          "topic": "Population",
+          "text": "The difference between birth rate and death rate gives the",
+          "options": [
+            "population density",
+            "rate of natural increase",
+            "dependency ratio",
+            "migration rate"
+          ],
+          "answer": 1,
+          "explanation": "Natural increase excludes migration, which is counted separately in population change."
+        },
+        {
+          "id": "geo-j24-11",
+          "topic": "Population",
+          "text": "Population density is correctly expressed as",
+          "options": [
+            "total population divided by land area",
+            "land area divided by total population",
+            "births divided by deaths",
+            "urban population divided by rural population"
+          ],
+          "answer": 0,
+          "explanation": "Density is usually stated as persons per square kilometre."
+        },
+        {
+          "id": "geo-j24-12",
+          "topic": "Settlement",
+          "text": "A settlement pattern in which houses are strung out along a road or river is described as",
+          "options": ["nucleated", "linear", "dispersed", "radial"],
+          "answer": 1,
+          "explanation": "Linear settlements follow a line of communication or a water source."
+        },
+        {
+          "id": "geo-j24-13",
+          "topic": "Economic geography",
+          "text": "Nigeria's tin mining is associated mainly with",
+          "options": [
+            "the Jos Plateau",
+            "the Niger Delta",
+            "the Sokoto Basin",
+            "the Oban Hills"
+          ],
+          "answer": 0,
+          "explanation": "Alluvial tin and columbite have long been worked on the Jos Plateau."
+        },
+        {
+          "id": "geo-j24-14",
+          "topic": "Economic geography",
+          "text": "The chief advantage of inland water transport is that it is",
+          "options": [
+            "the fastest means of transport",
+            "cheap for carrying bulky goods",
+            "independent of weather conditions",
+            "available in every part of a country"
+          ],
+          "answer": 1,
+          "explanation": "Water transport is slow but carries heavy, bulky cargo at low cost per tonne-kilometre."
+        },
+        {
+          "id": "geo-j24-15",
+          "topic": "Environmental hazards",
+          "text": "Desertification in northern Nigeria is worsened mainly by",
+          "options": [
+            "heavy rainfall",
+            "overgrazing and deforestation",
+            "coastal erosion",
+            "volcanic activity"
+          ],
+          "answer": 1,
+          "explanation": "Removal of vegetation cover exposes fragile soils to wind erosion and southward desert encroachment."
+        },
+        {
+          "id": "geo-j24-16",
+          "topic": "Map reading",
+          "text": "The representative fraction 1 : 100,000 means that one centimetre on the map represents",
+          "options": ["100 m", "1 km", "10 km", "100 km"],
+          "answer": 1,
+          "explanation": "100,000 cm = 1,000 m = 1 km."
+        }
+      ]
+    },
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 40,
+      "questions": [
+        {
+          "id": "geo-w23-01",
+          "topic": "The earth",
+          "text": "The imaginary line that divides the earth into the Northern and Southern Hemispheres is the",
+          "options": [
+            "Greenwich Meridian",
+            "Equator",
+            "Tropic of Cancer",
+            "International Date Line"
+          ],
+          "answer": 1,
+          "explanation": "The Equator is latitude 0° and divides the globe north from south."
+        },
+        {
+          "id": "geo-w23-02",
+          "topic": "The earth",
+          "text": "The revolution of the earth around the sun gives rise to",
+          "options": [
+            "day and night",
+            "the seasons of the year",
+            "time zones",
+            "tides"
+          ],
+          "answer": 1,
+          "explanation": "The earth's tilted axis combined with its annual orbit varies the concentration of sunlight received."
+        },
+        {
+          "id": "geo-w23-03",
+          "topic": "Weather",
+          "text": "Rainfall formed when moist air is forced to rise over a mountain barrier is",
+          "options": ["convectional", "relief", "frontal", "cyclonic"],
+          "answer": 1,
+          "explanation": "Relief or orographic rainfall falls on the windward slope, leaving a rain shadow to leeward."
+        },
+        {
+          "id": "geo-w23-04",
+          "topic": "Rocks",
+          "text": "Limestone, which is quarried for cement production, is an example of",
+          "options": [
+            "an igneous rock",
+            "a sedimentary rock",
+            "a metamorphic rock",
+            "a volcanic rock"
+          ],
+          "answer": 1,
+          "explanation": "It forms from accumulated shells and organic remains compacted over time."
+        },
+        {
+          "id": "geo-w23-05",
+          "topic": "Landforms",
+          "text": "A steep-sided valley with an almost vertical wall cut by a river in a dry region is a",
+          "options": ["gorge", "flood plain", "levee", "oxbow lake"],
+          "answer": 0,
+          "explanation": "Rapid vertical erosion with little lateral erosion produces a gorge or canyon."
+        },
+        {
+          "id": "geo-w23-06",
+          "topic": "Agriculture",
+          "text": "Shifting cultivation is practised mainly because",
+          "options": [
+            "farmers own large mechanised farms",
+            "it allows exhausted land to regain fertility",
+            "it produces crops for export",
+            "it requires heavy fertiliser input"
+          ],
+          "answer": 1,
+          "explanation": "Land is cropped for a few seasons, then abandoned to bush fallow while the farmer moves on."
+        },
+        {
+          "id": "geo-w23-07",
+          "topic": "Industry",
+          "text": "An industry that is located close to its source of raw material is said to be",
+          "options": [
+            "market oriented",
+            "raw material oriented",
+            "labour oriented",
+            "footloose"
+          ],
+          "answer": 1,
+          "explanation": "Bulky or perishable raw materials, as in cement and sugar milling, pull the factory to the source."
+        },
+        {
+          "id": "geo-w23-08",
+          "topic": "Transport",
+          "text": "A major problem of road transport in Nigeria is",
+          "options": [
+            "absence of vehicles",
+            "poor maintenance of the road network",
+            "lack of drivers",
+            "the small size of the country"
+          ],
+          "answer": 1,
+          "explanation": "Potholes, flooding and weak maintenance raise costs, travel time and accident rates."
+        },
+        {
+          "id": "geo-w23-09",
+          "topic": "Water resources",
+          "text": "The Kainji Dam on the River Niger was built principally to",
+          "options": [
+            "control flooding only",
+            "generate hydro-electric power",
+            "supply drinking water to Lagos",
+            "create a tourist centre"
+          ],
+          "answer": 1,
+          "explanation": "Hydro-electricity is its chief purpose, with navigation, fishing and irrigation as additional benefits."
+        },
+        {
+          "id": "geo-w23-10",
+          "topic": "Map reading",
+          "text": "The bearing of a point due east of an observer is",
+          "options": ["000°", "090°", "180°", "270°"],
+          "answer": 1,
+          "explanation": "Bearings are measured clockwise from north, so east is 090°."
+        },
+        {
+          "id": "geo-w23-11",
+          "topic": "Environment",
+          "text": "Gully erosion is most severe in which part of Nigeria?",
+          "options": [
+            "The Sokoto Basin",
+            "The South East, especially around Anambra and Enugu",
+            "The Lagos coastal plain",
+            "The Chad Basin"
+          ],
+          "answer": 1,
+          "explanation": "Friable sandy soils on steep slopes with heavy rainfall have produced extensive gullies in the South East."
+        },
+        {
+          "id": "geo-w23-12",
+          "topic": "Population",
+          "text": "Rural–urban migration in Nigeria is caused mainly by",
+          "options": [
+            "better employment prospects in the cities",
+            "cheaper housing in the cities",
+            "cleaner air in the cities",
+            "lower population density in the cities"
+          ],
+          "answer": 0,
+          "explanation": "Job opportunities, schools and services pull young people to towns, while low rural incomes push them out."
+        }
+      ]
+    }
+  ]
+}

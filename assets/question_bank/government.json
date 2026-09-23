@@ -1,0 +1,344 @@
+{
+  "subject": "government",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 27,
+      "questions": [
+        {
+          "id": "gov-j24-01",
+          "topic": "Basic concepts",
+          "text": "The supreme power of a state to make and enforce laws without external control is",
+          "options": ["democracy", "sovereignty", "legitimacy", "authority"],
+          "answer": 1,
+          "explanation": "Sovereignty is the ultimate law-making power, internally over citizens and externally free of foreign control."
+        },
+        {
+          "id": "gov-j24-02",
+          "topic": "Constitution",
+          "text": "A constitution that requires a special procedure for its amendment is described as",
+          "options": ["flexible", "rigid", "unitary", "unwritten"],
+          "answer": 1,
+          "explanation": "A rigid constitution can only be amended by a cumbersome process such as a two-thirds legislative majority and state approvals."
+        },
+        {
+          "id": "gov-j24-03",
+          "topic": "Organs of government",
+          "text": "The doctrine of separation of powers was propounded by",
+          "options": ["John Locke", "Baron de Montesquieu", "Thomas Hobbes", "Jean-Jacques Rousseau"],
+          "answer": 1,
+          "explanation": "Montesquieu argued in The Spirit of the Laws that legislative, executive and judicial powers should rest in separate hands."
+        },
+        {
+          "id": "gov-j24-04",
+          "topic": "Organs of government",
+          "text": "The main function of the judiciary is to",
+          "options": [
+            "make laws for the state",
+            "interpret laws and settle disputes",
+            "implement government policies",
+            "prepare the national budget"
+          ],
+          "answer": 1,
+          "explanation": "The judiciary interprets the constitution and statutes, adjudicates disputes and protects fundamental rights."
+        },
+        {
+          "id": "gov-j24-05",
+          "topic": "Systems of government",
+          "text": "In a federal system of government, powers are",
+          "options": [
+            "concentrated in the central government",
+            "shared between central and component units by the constitution",
+            "exercised by traditional rulers",
+            "delegated entirely to local councils"
+          ],
+          "answer": 1,
+          "explanation": "Federalism constitutionally divides powers so that neither level of government is subordinate to the other."
+        },
+        {
+          "id": "gov-j24-06",
+          "topic": "Political parties",
+          "text": "A one-party system is usually associated with",
+          "options": [
+            "liberal democracy",
+            "authoritarian rule",
+            "coalition government",
+            "proportional representation"
+          ],
+          "answer": 1,
+          "explanation": "Where only one party is legal, opposition is suppressed and power is concentrated, which is characteristic of authoritarian states."
+        },
+        {
+          "id": "gov-j24-07",
+          "topic": "Electoral systems",
+          "text": "The electoral system in which a candidate with the highest number of votes wins, regardless of a majority, is",
+          "options": [
+            "proportional representation",
+            "simple majority (first past the post)",
+            "absolute majority",
+            "second ballot"
+          ],
+          "answer": 1,
+          "explanation": "First past the post awards the seat to the leading candidate even without more than half of the votes cast."
+        },
+        {
+          "id": "gov-j24-08",
+          "topic": "Public administration",
+          "text": "The civil service is characterised by all of the following except",
+          "options": ["anonymity", "permanence", "political neutrality", "partisanship"],
+          "answer": 3,
+          "explanation": "Civil servants serve whichever government is in office and must therefore remain non-partisan."
+        },
+        {
+          "id": "gov-j24-09",
+          "topic": "Nigerian government",
+          "text": "The 1914 amalgamation of the Northern and Southern Protectorates of Nigeria was carried out by",
+          "options": [
+            "Lord Lugard",
+            "Sir Arthur Richards",
+            "Sir John Macpherson",
+            "Sir Hugh Clifford"
+          ],
+          "answer": 0,
+          "explanation": "Sir Frederick Lugard amalgamated the two protectorates in 1914 largely for administrative and fiscal convenience."
+        },
+        {
+          "id": "gov-j24-10",
+          "topic": "Nigerian government",
+          "text": "The constitution that introduced federalism into Nigeria was the",
+          "options": [
+            "Clifford Constitution of 1922",
+            "Richards Constitution of 1946",
+            "Macpherson Constitution of 1951",
+            "Lyttleton Constitution of 1954"
+          ],
+          "answer": 3,
+          "explanation": "The Lyttleton Constitution of 1954 formally made Nigeria a federation with autonomous regions."
+        },
+        {
+          "id": "gov-j24-11",
+          "topic": "Colonial administration",
+          "text": "Indirect rule in Northern Nigeria succeeded largely because of the",
+          "options": [
+            "absence of traditional rulers",
+            "existence of a centralised emirate system",
+            "high level of Western education",
+            "influence of Christian missionaries"
+          ],
+          "answer": 1,
+          "explanation": "The emirates already had a hierarchy of authority, taxation and courts that the British could govern through."
+        },
+        {
+          "id": "gov-j24-12",
+          "topic": "Pressure groups",
+          "text": "The main difference between a political party and a pressure group is that a political party",
+          "options": [
+            "seeks to capture political power",
+            "is registered by the government",
+            "has a written constitution",
+            "collects dues from members"
+          ],
+          "answer": 0,
+          "explanation": "A pressure group seeks to influence policy from outside; a party contests elections to form government."
+        },
+        {
+          "id": "gov-j24-13",
+          "topic": "International organisations",
+          "text": "The principal organ of the United Nations charged with maintaining international peace and security is the",
+          "options": [
+            "General Assembly",
+            "Security Council",
+            "Economic and Social Council",
+            "International Court of Justice"
+          ],
+          "answer": 1,
+          "explanation": "The Security Council may authorise sanctions and peacekeeping, and its five permanent members hold the veto."
+        },
+        {
+          "id": "gov-j24-14",
+          "topic": "International organisations",
+          "text": "ECOWAS was established in 1975 primarily to promote",
+          "options": [
+            "military cooperation in West Africa",
+            "economic integration among member states",
+            "a common currency for Africa",
+            "the decolonisation of Southern Africa"
+          ],
+          "answer": 1,
+          "explanation": "The Treaty of Lagos created ECOWAS to promote trade, free movement and economic cooperation in the sub-region."
+        },
+        {
+          "id": "gov-j24-15",
+          "topic": "Citizenship",
+          "text": "The acquisition of citizenship by a foreigner through a legal process is known as",
+          "options": ["birth", "registration", "naturalisation", "descent"],
+          "answer": 2,
+          "explanation": "Naturalisation grants citizenship to a qualified foreigner after a period of lawful residence and good conduct."
+        },
+        {
+          "id": "gov-j24-16",
+          "topic": "Rule of law",
+          "text": "Which of the following is a pillar of the rule of law as expounded by A. V. Dicey?",
+          "options": [
+            "Supremacy of the executive",
+            "Equality of all persons before the law",
+            "Immunity of public officers from prosecution",
+            "Detention without trial in emergencies"
+          ],
+          "answer": 1,
+          "explanation": "Dicey's principles are the supremacy of ordinary law, equality before the law and rights grounded in judicial decisions."
+        }
+      ]
+    },
+    {
+      "body": "NECO",
+      "year": 2023,
+      "diet": "June/July",
+      "duration": 45,
+      "questions": [
+        {
+          "id": "gov-n23-01",
+          "topic": "Systems of government",
+          "text": "A unitary system of government is best suited to a state that is",
+          "options": [
+            "large and ethnically diverse",
+            "small and relatively homogeneous",
+            "recently formed from separate colonies",
+            "governed by a military council"
+          ],
+          "answer": 1,
+          "explanation": "Concentrating power at the centre works best where there are few deep regional or ethnic cleavages to accommodate."
+        },
+        {
+          "id": "gov-n23-02",
+          "topic": "Organs of government",
+          "text": "In a presidential system, the president is",
+          "options": [
+            "both head of state and head of government",
+            "head of state only",
+            "head of government only",
+            "appointed by the legislature"
+          ],
+          "answer": 0,
+          "explanation": "The offices are fused in the presidency, unlike the parliamentary system where they are separated."
+        },
+        {
+          "id": "gov-n23-03",
+          "topic": "Legislature",
+          "text": "A bicameral legislature is one that",
+          "options": [
+            "has two chambers",
+            "sits twice a year",
+            "has two presiding officers in one chamber",
+            "shares power with the executive"
+          ],
+          "answer": 0,
+          "explanation": "Nigeria's National Assembly is bicameral, consisting of the Senate and the House of Representatives."
+        },
+        {
+          "id": "gov-n23-04",
+          "topic": "Nigerian government",
+          "text": "Nigeria returned to civilian rule at the beginning of the Fourth Republic in",
+          "options": ["1979", "1993", "1999", "2003"],
+          "answer": 2,
+          "explanation": "The handover on 29 May 1999 ended fifteen years of unbroken military rule."
+        },
+        {
+          "id": "gov-n23-05",
+          "topic": "Local government",
+          "text": "The main justification for creating local government is to",
+          "options": [
+            "increase the number of political appointments",
+            "bring governance closer to the grassroots",
+            "reduce the powers of state governors",
+            "collect customs duties"
+          ],
+          "answer": 1,
+          "explanation": "Local government exists to deliver services and encourage participation at community level."
+        },
+        {
+          "id": "gov-n23-06",
+          "topic": "Electoral systems",
+          "text": "The body responsible for the conduct of federal elections in Nigeria is the",
+          "options": [
+            "Federal Character Commission",
+            "Independent National Electoral Commission",
+            "National Judicial Council",
+            "Code of Conduct Bureau"
+          ],
+          "answer": 1,
+          "explanation": "INEC registers voters and parties and conducts elections into federal and state offices."
+        },
+        {
+          "id": "gov-n23-07",
+          "topic": "Political ideologies",
+          "text": "The ideology that advocates public ownership of the means of production is",
+          "options": ["capitalism", "socialism", "feudalism", "liberalism"],
+          "answer": 1,
+          "explanation": "Socialism places the means of production under collective or state ownership to reduce inequality."
+        },
+        {
+          "id": "gov-n23-08",
+          "topic": "Public administration",
+          "text": "Public corporations are established mainly to",
+          "options": [
+            "maximise profit for shareholders",
+            "provide essential services to the public",
+            "compete with foreign companies",
+            "employ political party members"
+          ],
+          "answer": 1,
+          "explanation": "They supply essential services such as power and water where private provision would be inadequate or exploitative."
+        },
+        {
+          "id": "gov-n23-09",
+          "topic": "Pre-colonial administration",
+          "text": "Pre-colonial Igbo society is best described as",
+          "options": [
+            "a centralised monarchy",
+            "a segmentary, largely republican system",
+            "a theocratic empire",
+            "a feudal kingdom"
+          ],
+          "answer": 1,
+          "explanation": "Authority was dispersed among village assemblies, age grades and title holders rather than a single monarch."
+        },
+        {
+          "id": "gov-n23-10",
+          "topic": "International organisations",
+          "text": "The African Union replaced the Organisation of African Unity in",
+          "options": ["1999", "2000", "2002", "2005"],
+          "answer": 2,
+          "explanation": "The AU was formally launched in Durban in July 2002 with a broader mandate than the OAU."
+        },
+        {
+          "id": "gov-n23-11",
+          "topic": "Fundamental rights",
+          "text": "The right to fair hearing is best protected by",
+          "options": [
+            "an independent judiciary",
+            "a strong executive",
+            "a large police force",
+            "a one-party legislature"
+          ],
+          "answer": 0,
+          "explanation": "Only a judiciary free from executive control can guarantee impartial adjudication."
+        },
+        {
+          "id": "gov-n23-12",
+          "topic": "Federalism",
+          "text": "Revenue allocation in a federation is necessary because",
+          "options": [
+            "all units generate equal revenue",
+            "the units differ in resources and responsibilities",
+            "the constitution forbids internal taxation",
+            "federal government has no revenue of its own"
+          ],
+          "answer": 1,
+          "explanation": "Vertical and horizontal imbalances between tiers of government make a sharing formula unavoidable."
+        }
+      ]
+    }
+  ]
+}

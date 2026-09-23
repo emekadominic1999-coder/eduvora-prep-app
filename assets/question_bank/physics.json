@@ -1,0 +1,310 @@
+{
+  "subject": "physics",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 27,
+      "questions": [
+        {
+          "id": "phy-j24-01",
+          "topic": "Motion",
+          "text": "A body starts from rest and moves with a uniform acceleration of 2 m/s². How far does it travel in 5 seconds?",
+          "options": ["10 m", "20 m", "25 m", "50 m"],
+          "answer": 2,
+          "explanation": "s = ut + ½at² = 0 + ½ × 2 × 25 = 25 m."
+        },
+        {
+          "id": "phy-j24-02",
+          "topic": "Current electricity",
+          "text": "A current of 2 A flows through a 5 Ω resistor. Calculate the power dissipated.",
+          "options": ["2.5 W", "10 W", "20 W", "50 W"],
+          "answer": 2,
+          "explanation": "P = I²R = 2² × 5 = 20 W."
+        },
+        {
+          "id": "phy-j24-03",
+          "topic": "Current electricity",
+          "text": "Two resistors of 4 Ω and 6 Ω are connected in parallel. Find the effective resistance.",
+          "options": ["0.42 Ω", "2.4 Ω", "5.0 Ω", "10 Ω"],
+          "answer": 1,
+          "explanation": "1/R = 1/4 + 1/6 = 5/12, so R = 12/5 = 2.4 Ω."
+        },
+        {
+          "id": "phy-j24-04",
+          "topic": "Light waves",
+          "text": "The refractive index of glass is 1.5. If the speed of light in air is 3 × 10⁸ m/s, find its speed in glass.",
+          "options": [
+            "1.5 × 10⁸ m/s",
+            "2.0 × 10⁸ m/s",
+            "4.5 × 10⁸ m/s",
+            "3.0 × 10⁸ m/s"
+          ],
+          "answer": 1,
+          "explanation": "n = c/v, so v = 3 × 10⁸ / 1.5 = 2 × 10⁸ m/s."
+        },
+        {
+          "id": "phy-j24-05",
+          "topic": "Heat energy",
+          "text": "Calculate the heat required to raise the temperature of 2 kg of water by 10 K. [Specific heat capacity of water = 4200 J/kgK]",
+          "options": ["8.4 kJ", "42 kJ", "84 kJ", "840 kJ"],
+          "answer": 2,
+          "explanation": "Q = mcΔθ = 2 × 4200 × 10 = 84,000 J = 84 kJ."
+        },
+        {
+          "id": "phy-j24-06",
+          "topic": "Waves",
+          "text": "A wave of frequency 500 Hz has a wavelength of 0.6 m. Calculate its velocity.",
+          "options": ["83.3 m/s", "300 m/s", "500 m/s", "833 m/s"],
+          "answer": 1,
+          "explanation": "v = fλ = 500 × 0.6 = 300 m/s."
+        },
+        {
+          "id": "phy-j24-07",
+          "topic": "Machines",
+          "text": "A machine lifts a load of 800 N using an effort of 200 N. Calculate the mechanical advantage.",
+          "options": ["0.25", "4", "40", "400"],
+          "answer": 1,
+          "explanation": "MA = load/effort = 800/200 = 4."
+        },
+        {
+          "id": "phy-j24-08",
+          "topic": "Machines",
+          "text": "A machine with a velocity ratio of 5 has a mechanical advantage of 4. Calculate its efficiency.",
+          "options": ["20%", "45%", "80%", "125%"],
+          "answer": 2,
+          "explanation": "Efficiency = (MA/VR) × 100 = (4/5) × 100 = 80%."
+        },
+        {
+          "id": "phy-j24-09",
+          "topic": "Pressure",
+          "text": "Calculate the pressure at a depth of 5 m in water of density 1000 kg/m³. [g = 10 m/s²]",
+          "options": ["5 kPa", "20 kPa", "50 kPa", "500 kPa"],
+          "answer": 2,
+          "explanation": "P = ρgh = 1000 × 10 × 5 = 50,000 Pa = 50 kPa."
+        },
+        {
+          "id": "phy-j24-10",
+          "topic": "Momentum",
+          "text": "A body of mass 2 kg moving at 5 m/s collides with a stationary body of mass 3 kg and they move off together. Find their common velocity.",
+          "options": ["1 m/s", "2 m/s", "2.5 m/s", "5 m/s"],
+          "answer": 1,
+          "explanation": "Momentum is conserved: 2 × 5 = (2 + 3)v, so v = 10/5 = 2 m/s."
+        },
+        {
+          "id": "phy-j24-11",
+          "topic": "Radioactivity",
+          "text": "A radioactive substance has a half-life of 8 days. What mass of an 80 g sample remains after 24 days?",
+          "options": ["5 g", "10 g", "20 g", "40 g"],
+          "answer": 1,
+          "explanation": "24 days is three half-lives: 80 → 40 → 20 → 10 g."
+        },
+        {
+          "id": "phy-j24-12",
+          "topic": "Electromagnetic waves",
+          "text": "Which of the following electromagnetic waves has the shortest wavelength?",
+          "options": ["Radio waves", "Infrared", "Ultraviolet", "Gamma rays"],
+          "answer": 3,
+          "explanation": "Gamma rays occupy the highest-frequency, shortest-wavelength end of the electromagnetic spectrum."
+        },
+        {
+          "id": "phy-j24-13",
+          "topic": "Light waves",
+          "text": "An object is placed at the centre of curvature (2F) of a converging lens. The image formed is",
+          "options": [
+            "virtual, erect and magnified",
+            "real, inverted and the same size as the object",
+            "real, inverted and diminished",
+            "virtual, inverted and diminished"
+          ],
+          "answer": 1,
+          "explanation": "At 2F the image is formed at 2F on the other side: real, inverted and the same size as the object."
+        },
+        {
+          "id": "phy-j24-14",
+          "topic": "Current electricity",
+          "text": "A cell of emf 12 V and internal resistance 1 Ω is connected to a 5 Ω resistor. Calculate the current in the circuit.",
+          "options": ["1.5 A", "2.0 A", "2.4 A", "12 A"],
+          "answer": 1,
+          "explanation": "I = E/(R + r) = 12/(5 + 1) = 2 A."
+        },
+        {
+          "id": "phy-j24-15",
+          "topic": "Work, energy and power",
+          "text": "A force of 50 N moves a body through 4 m in a direction making 60° with the force. Calculate the work done.",
+          "options": ["100 J", "173 J", "200 J", "400 J"],
+          "answer": 0,
+          "explanation": "W = Fs cos θ = 50 × 4 × cos 60° = 50 × 4 × 0.5 = 100 J."
+        },
+        {
+          "id": "phy-j24-16",
+          "topic": "Simple harmonic motion",
+          "text": "If the length of a simple pendulum is increased four times, its period will",
+          "options": [
+            "remain the same",
+            "be halved",
+            "be doubled",
+            "be four times greater"
+          ],
+          "answer": 2,
+          "explanation": "T = 2π√(l/g), so T is proportional to √l. Quadrupling l doubles T."
+        },
+        {
+          "id": "phy-j24-17",
+          "topic": "Electronics",
+          "text": "A semiconductor doped with a trivalent impurity such as boron becomes",
+          "options": [
+            "an n-type semiconductor",
+            "a p-type semiconductor",
+            "an intrinsic semiconductor",
+            "an insulator"
+          ],
+          "answer": 1,
+          "explanation": "A trivalent dopant creates holes as the majority carriers, giving a p-type semiconductor."
+        },
+        {
+          "id": "phy-j24-18",
+          "topic": "Gas laws",
+          "text": "A gas occupies 200 cm³ at 27°C. At what temperature will it occupy 300 cm³ at constant pressure?",
+          "options": ["177°C", "200°C", "400°C", "450°C"],
+          "answer": 0,
+          "explanation": "Charles' law: V₁/T₁ = V₂/T₂ → 200/300 = 300/T₂ with T₁ = 300 K, giving T₂ = 450 K = 177°C."
+        }
+      ]
+    },
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 45,
+      "questions": [
+        {
+          "id": "phy-w23-01",
+          "topic": "Measurement",
+          "text": "Which of the following is a fundamental quantity?",
+          "options": ["Force", "Density", "Mass", "Pressure"],
+          "answer": 2,
+          "explanation": "Mass is one of the seven fundamental quantities; force, density and pressure are derived from mass, length and time."
+        },
+        {
+          "id": "phy-w23-02",
+          "topic": "Density",
+          "text": "A body of mass 200 g occupies a volume of 40 cm³. Calculate its density.",
+          "options": ["0.2 g/cm³", "5 g/cm³", "8 g/cm³", "240 g/cm³"],
+          "answer": 1,
+          "explanation": "Density = mass/volume = 200/40 = 5 g/cm³."
+        },
+        {
+          "id": "phy-w23-03",
+          "topic": "Motion",
+          "text": "The area under a velocity–time graph represents the",
+          "options": [
+            "acceleration of the body",
+            "distance travelled by the body",
+            "momentum of the body",
+            "force acting on the body"
+          ],
+          "answer": 1,
+          "explanation": "Velocity multiplied by time gives displacement, so the enclosed area is the distance travelled."
+        },
+        {
+          "id": "phy-w23-04",
+          "topic": "Gravitation",
+          "text": "The weight of a body on the moon is about one-sixth of its weight on earth because the moon has",
+          "options": [
+            "no atmosphere",
+            "a smaller acceleration due to gravity",
+            "a lower temperature",
+            "a smaller mass for the body"
+          ],
+          "answer": 1,
+          "explanation": "Mass is unchanged; weight falls because g on the moon is roughly one-sixth of g on earth."
+        },
+        {
+          "id": "phy-w23-05",
+          "topic": "Heat energy",
+          "text": "During a change of state, the heat supplied to a substance",
+          "options": [
+            "raises its temperature steadily",
+            "changes its state at constant temperature",
+            "is entirely lost to the surroundings",
+            "reduces its internal energy"
+          ],
+          "answer": 1,
+          "explanation": "Latent heat breaks the bonds between molecules, so the temperature stays constant while the state changes."
+        },
+        {
+          "id": "phy-w23-06",
+          "topic": "Sound waves",
+          "text": "Sound waves cannot travel through a vacuum because they",
+          "options": [
+            "are transverse waves",
+            "require a material medium",
+            "travel too slowly",
+            "have very long wavelengths"
+          ],
+          "answer": 1,
+          "explanation": "Sound is a mechanical wave and needs particles of a medium to transmit the vibration."
+        },
+        {
+          "id": "phy-w23-07",
+          "topic": "Light waves",
+          "text": "The image formed by a convex mirror is always",
+          "options": [
+            "real, inverted and magnified",
+            "virtual, erect and diminished",
+            "real, erect and the same size",
+            "virtual, inverted and magnified"
+          ],
+          "answer": 1,
+          "explanation": "A diverging mirror always forms a virtual, erect, diminished image behind the mirror, which is why it is used as a driving mirror."
+        },
+        {
+          "id": "phy-w23-08",
+          "topic": "Electrical safety",
+          "text": "In domestic wiring, the fuse is connected to the",
+          "options": ["neutral wire", "earth wire", "live wire", "switch casing"],
+          "answer": 2,
+          "explanation": "Placing the fuse in the live wire cuts off the supply from the source when excess current flows."
+        },
+        {
+          "id": "phy-w23-09",
+          "topic": "Electromagnetism",
+          "text": "A transformer has 1000 turns in the primary coil and 100 turns in the secondary. If the primary voltage is 240 V, calculate the secondary voltage.",
+          "options": ["2.4 V", "24 V", "240 V", "2400 V"],
+          "answer": 1,
+          "explanation": "Vs/Vp = Ns/Np, so Vs = 240 × 100/1000 = 24 V."
+        },
+        {
+          "id": "phy-w23-10",
+          "topic": "Light waves",
+          "text": "The critical angle for a medium of refractive index 1.5 is approximately",
+          "options": ["30°", "42°", "48°", "60°"],
+          "answer": 1,
+          "explanation": "sin C = 1/n = 1/1.5 = 0.667, so C ≈ 41.8°, about 42°."
+        },
+        {
+          "id": "phy-w23-11",
+          "topic": "Electrostatics",
+          "text": "The force between two point charges is inversely proportional to the",
+          "options": [
+            "distance between them",
+            "square of the distance between them",
+            "product of the charges",
+            "square of the product of the charges"
+          ],
+          "answer": 1,
+          "explanation": "Coulomb's law states F = kq₁q₂/r², an inverse-square relationship with distance."
+        },
+        {
+          "id": "phy-w23-12",
+          "topic": "Elasticity",
+          "text": "The energy stored in a spring of force constant k when stretched through an extension e is",
+          "options": ["ke", "½ke", "½ke²", "ke²"],
+          "answer": 2,
+          "explanation": "Work done in stretching = area under the force–extension graph = ½ × (ke) × e = ½ke²."
+        }
+      ]
+    }
+  ]
+}

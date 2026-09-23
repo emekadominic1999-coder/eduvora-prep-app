@@ -1,0 +1,294 @@
+{
+  "subject": "crs",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 27,
+      "questions": [
+        {
+          "id": "crs-j24-01",
+          "topic": "Creation and the fall",
+          "text": "According to the book of Genesis, the tree from which Adam and Eve were forbidden to eat was the tree of",
+          "options": [
+            "life",
+            "the knowledge of good and evil",
+            "wisdom",
+            "righteousness"
+          ],
+          "answer": 1,
+          "explanation": "Genesis 2:17 records the prohibition against the tree of the knowledge of good and evil."
+        },
+        {
+          "id": "crs-j24-02",
+          "topic": "The patriarchs",
+          "text": "God's covenant with Abraham was sealed with the sign of",
+          "options": ["the rainbow", "circumcision", "the Passover", "the Sabbath"],
+          "answer": 1,
+          "explanation": "Genesis 17 makes circumcision of every male the sign of the everlasting covenant."
+        },
+        {
+          "id": "crs-j24-03",
+          "topic": "The patriarchs",
+          "text": "Joseph was sold into slavery in Egypt by",
+          "options": [
+            "his brothers",
+            "the Ishmaelite traders",
+            "Potiphar",
+            "his father Jacob"
+          ],
+          "answer": 0,
+          "explanation": "Out of envy his brothers sold him to passing traders, who took him to Egypt."
+        },
+        {
+          "id": "crs-j24-04",
+          "topic": "The Exodus",
+          "text": "The leader who brought the Israelites out of Egypt was",
+          "options": ["Joshua", "Aaron", "Moses", "Samuel"],
+          "answer": 2,
+          "explanation": "Moses was called at the burning bush to lead Israel out of bondage."
+        },
+        {
+          "id": "crs-j24-05",
+          "topic": "The Exodus",
+          "text": "The Ten Commandments were given to Moses on",
+          "options": ["Mount Carmel", "Mount Sinai", "Mount Nebo", "Mount Zion"],
+          "answer": 1,
+          "explanation": "Exodus 20 records the giving of the Decalogue at Sinai."
+        },
+        {
+          "id": "crs-j24-06",
+          "topic": "The united monarchy",
+          "text": "The first king of Israel was",
+          "options": ["David", "Saul", "Solomon", "Samuel"],
+          "answer": 1,
+          "explanation": "Saul was anointed by Samuel after the people demanded a king like the other nations."
+        },
+        {
+          "id": "crs-j24-07",
+          "topic": "The united monarchy",
+          "text": "Solomon is chiefly remembered for building the temple in Jerusalem and for his",
+          "options": ["military conquests", "wisdom", "prophecies", "missionary journeys"],
+          "answer": 1,
+          "explanation": "He asked God for an understanding heart to govern, and his wisdom became proverbial."
+        },
+        {
+          "id": "crs-j24-08",
+          "topic": "The prophets",
+          "text": "The prophet who confronted the prophets of Baal on Mount Carmel was",
+          "options": ["Elisha", "Elijah", "Jeremiah", "Amos"],
+          "answer": 1,
+          "explanation": "1 Kings 18 records Elijah's contest with the four hundred and fifty prophets of Baal."
+        },
+        {
+          "id": "crs-j24-09",
+          "topic": "The prophets",
+          "text": "The prophet who denounced social injustice and called for justice to roll down like waters was",
+          "options": ["Amos", "Hosea", "Micah", "Isaiah"],
+          "answer": 0,
+          "explanation": "Amos condemned the oppression of the poor in the northern kingdom and demanded justice and righteousness."
+        },
+        {
+          "id": "crs-j24-10",
+          "topic": "Birth and early ministry",
+          "text": "Jesus was baptised in the River Jordan by",
+          "options": ["Peter", "John the Baptist", "Andrew", "Philip"],
+          "answer": 1,
+          "explanation": "John baptised Jesus, after which the Spirit descended and the voice from heaven was heard."
+        },
+        {
+          "id": "crs-j24-11",
+          "topic": "Teachings of Jesus",
+          "text": "The parable of the Good Samaritan teaches chiefly about",
+          "options": [
+            "the forgiveness of sin",
+            "love for one's neighbour",
+            "the value of prayer",
+            "the coming of the kingdom"
+          ],
+          "answer": 1,
+          "explanation": "Jesus told it in answer to the lawyer's question, 'Who is my neighbour?'"
+        },
+        {
+          "id": "crs-j24-12",
+          "topic": "Teachings of Jesus",
+          "text": "The Sermon on the Mount begins with a series of blessings known as the",
+          "options": ["Beatitudes", "Parables", "Woes", "Commandments"],
+          "answer": 0,
+          "explanation": "Matthew 5 opens with the Beatitudes, pronouncing blessings on the poor in spirit, the meek and others."
+        },
+        {
+          "id": "crs-j24-13",
+          "topic": "Passion and resurrection",
+          "text": "The disciple who betrayed Jesus was",
+          "options": ["Thomas", "Judas Iscariot", "Peter", "Bartholomew"],
+          "answer": 1,
+          "explanation": "Judas handed Jesus over to the chief priests for thirty pieces of silver."
+        },
+        {
+          "id": "crs-j24-14",
+          "topic": "The early church",
+          "text": "The Holy Spirit descended on the apostles on the day of",
+          "options": ["Passover", "Pentecost", "Tabernacles", "Atonement"],
+          "answer": 1,
+          "explanation": "Acts 2 records the coming of the Spirit at Pentecost, followed by Peter's sermon."
+        },
+        {
+          "id": "crs-j24-15",
+          "topic": "The early church",
+          "text": "Saul of Tarsus was converted on his way to",
+          "options": ["Antioch", "Damascus", "Ephesus", "Corinth"],
+          "answer": 1,
+          "explanation": "On the Damascus road he encountered the risen Christ and became the apostle Paul."
+        },
+        {
+          "id": "crs-j24-16",
+          "topic": "The early church",
+          "text": "The seven men appointed in Acts 6 to serve tables were chosen because of",
+          "options": [
+            "a famine in Judea",
+            "a complaint by the Hellenists about the daily distribution",
+            "persecution by Herod",
+            "the refusal of the apostles to preach"
+          ],
+          "answer": 1,
+          "explanation": "The Hellenist widows were being neglected, so deacons were appointed and the apostles kept to prayer and the word."
+        }
+      ]
+    },
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 40,
+      "questions": [
+        {
+          "id": "crs-w23-01",
+          "topic": "Creation",
+          "text": "According to the creation account, man was made in the",
+          "options": [
+            "image of the angels",
+            "image and likeness of God",
+            "form of the earth only",
+            "pattern of the animals"
+          ],
+          "answer": 1,
+          "explanation": "Genesis 1:26-27 states that God made man in his own image."
+        },
+        {
+          "id": "crs-w23-02",
+          "topic": "The patriarchs",
+          "text": "The son whom Abraham was asked to offer as a sacrifice was",
+          "options": ["Ishmael", "Isaac", "Jacob", "Esau"],
+          "answer": 1,
+          "explanation": "Genesis 22 records the testing of Abraham with Isaac, the son of promise."
+        },
+        {
+          "id": "crs-w23-03",
+          "topic": "The judges",
+          "text": "The judge whose strength lay in his uncut hair was",
+          "options": ["Gideon", "Samson", "Jephthah", "Ehud"],
+          "answer": 1,
+          "explanation": "Samson was a Nazirite from birth, and his strength departed when Delilah had his hair shaved."
+        },
+        {
+          "id": "crs-w23-04",
+          "topic": "The united monarchy",
+          "text": "David was chosen as king while he was",
+          "options": [
+            "a soldier in Saul's army",
+            "tending his father's sheep",
+            "a priest at Shiloh",
+            "a merchant in Bethlehem"
+          ],
+          "answer": 1,
+          "explanation": "Samuel anointed the youngest son of Jesse, who had been left with the flock."
+        },
+        {
+          "id": "crs-w23-05",
+          "topic": "The prophets",
+          "text": "Nathan the prophet rebuked David over the matter of",
+          "options": [
+            "the census of Israel",
+            "Uriah the Hittite and Bathsheba",
+            "the building of the temple",
+            "the golden calf"
+          ],
+          "answer": 1,
+          "explanation": "Nathan's parable of the poor man's lamb exposed David's sin and brought him to repentance."
+        },
+        {
+          "id": "crs-w23-06",
+          "topic": "Teachings of Jesus",
+          "text": "The parable of the Prodigal Son emphasises",
+          "options": [
+            "the danger of wealth",
+            "the father's readiness to forgive",
+            "the duty of almsgiving",
+            "the need for fasting"
+          ],
+          "answer": 1,
+          "explanation": "The father's running to meet his returning son pictures God's mercy to the repentant."
+        },
+        {
+          "id": "crs-w23-07",
+          "topic": "Miracles",
+          "text": "Jesus fed the five thousand with",
+          "options": [
+            "five loaves and two fish",
+            "seven loaves and a few fish",
+            "twelve baskets of bread",
+            "manna from heaven"
+          ],
+          "answer": 0,
+          "explanation": "The account records five barley loaves and two fish, with twelve baskets of fragments left over."
+        },
+        {
+          "id": "crs-w23-08",
+          "topic": "Passion and resurrection",
+          "text": "Jesus was tried before the Roman governor",
+          "options": ["Herod Antipas", "Pontius Pilate", "Caiaphas", "Felix"],
+          "answer": 1,
+          "explanation": "Pilate, the procurator of Judea, finally handed Jesus over to be crucified."
+        },
+        {
+          "id": "crs-w23-09",
+          "topic": "The early church",
+          "text": "Ananias and Sapphira were judged for",
+          "options": [
+            "refusing to sell their land",
+            "lying to the Holy Spirit about the proceeds of their sale",
+            "persecuting the apostles",
+            "teaching false doctrine"
+          ],
+          "answer": 1,
+          "explanation": "Acts 5 shows that their sin was deceit, not the withholding of the money itself."
+        },
+        {
+          "id": "crs-w23-10",
+          "topic": "Christian living",
+          "text": "According to Paul, the greatest of faith, hope and love is",
+          "options": ["faith", "hope", "love", "they are equal"],
+          "answer": 2,
+          "explanation": "1 Corinthians 13 concludes that love is the greatest because it never ends."
+        },
+        {
+          "id": "crs-w23-11",
+          "topic": "Christian living",
+          "text": "The fruit of the Spirit listed by Paul in Galatians begins with",
+          "options": ["joy", "love", "peace", "patience"],
+          "answer": 1,
+          "explanation": "The list opens with love, followed by joy, peace, patience and the rest."
+        },
+        {
+          "id": "crs-w23-12",
+          "topic": "Christian living",
+          "text": "James teaches that faith without works is",
+          "options": ["weak", "dead", "hidden", "sufficient"],
+          "answer": 1,
+          "explanation": "James 2:17 insists that faith unaccompanied by action has no life in it."
+        }
+      ]
+    }
+  ]
+}

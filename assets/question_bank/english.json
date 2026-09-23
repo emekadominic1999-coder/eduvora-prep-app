@@ -1,0 +1,367 @@
+{
+  "subject": "english",
+  "papers": [
+    {
+      "body": "JAMB",
+      "year": 2024,
+      "duration": 40,
+      "questions": [
+        {
+          "id": "eng-j24-01",
+          "topic": "Comprehension",
+          "instruction": "Read the passage carefully and answer the question that follows.",
+          "passage": "For decades, the palm oil trade shaped the fortunes of the Niger Delta. Long before crude oil was struck at Oloibiri, the creeks carried canoes heavy with red oil bound for Liverpool and Hamburg. Families measured their standing not by the land they held but by the number of presses they could keep working through the harvest. When the mineral boom arrived, the presses fell silent almost overnight. Young men who had once tended groves drifted towards the oil terminals, and the skill of tapping, which had passed from father to son for generations, thinned into memory within a single lifetime.",
+          "text": "According to the passage, wealth in the Niger Delta was traditionally measured by the",
+          "options": [
+            "acreage of farmland a family owned",
+            "number of oil presses a family kept in use",
+            "quantity of crude oil a community exported",
+            "number of canoes a family could build"
+          ],
+          "answer": 1,
+          "explanation": "The passage states that families measured their standing 'not by the land they held but by the number of presses they could keep working'."
+        },
+        {
+          "id": "eng-j24-02",
+          "topic": "Comprehension",
+          "instruction": "Read the passage carefully and answer the question that follows.",
+          "passage": "For decades, the palm oil trade shaped the fortunes of the Niger Delta. Long before crude oil was struck at Oloibiri, the creeks carried canoes heavy with red oil bound for Liverpool and Hamburg. Families measured their standing not by the land they held but by the number of presses they could keep working through the harvest. When the mineral boom arrived, the presses fell silent almost overnight. Young men who had once tended groves drifted towards the oil terminals, and the skill of tapping, which had passed from father to son for generations, thinned into memory within a single lifetime.",
+          "text": "The expression 'thinned into memory' suggests that the skill of tapping",
+          "options": [
+            "became more refined over time",
+            "was recorded carefully for future generations",
+            "gradually faded until it was only remembered",
+            "was deliberately abandoned by the elders"
+          ],
+          "answer": 2,
+          "explanation": "To thin into memory is to dwindle until the practice survives only as a recollection, not as living work."
+        },
+        {
+          "id": "eng-j24-03",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The principal insisted that every candidate ______ present before the briefing began.",
+          "options": ["is", "be", "was", "were"],
+          "answer": 1,
+          "explanation": "Verbs of insistence, demand and suggestion take the subjunctive: 'insisted that every candidate be present'."
+        },
+        {
+          "id": "eng-j24-04",
+          "topic": "Antonyms",
+          "instruction": "Choose the option opposite in meaning to the word in capital letters.",
+          "text": "The governor's remarks on the dispute were unusually TERSE.",
+          "options": ["blunt", "long-winded", "polite", "honest"],
+          "answer": 1,
+          "explanation": "Terse means brief and to the point; its opposite is long-winded or wordy."
+        },
+        {
+          "id": "eng-j24-05",
+          "topic": "Synonyms",
+          "instruction": "Choose the option nearest in meaning to the word in capital letters.",
+          "text": "The committee's findings were later CORROBORATED by two independent auditors.",
+          "options": ["confirmed", "questioned", "published", "summarised"],
+          "answer": 0,
+          "explanation": "To corroborate is to support a statement with further evidence, that is, to confirm it."
+        },
+        {
+          "id": "eng-j24-06",
+          "topic": "Oral forms: vowel sounds",
+          "instruction": "Choose the option that has the same vowel sound as the word in capital letters.",
+          "text": "BEAR",
+          "options": ["fear", "care", "beer", "bar"],
+          "answer": 1,
+          "explanation": "'Bear' and 'care' both carry the diphthong /eə/. 'Fear' and 'beer' carry /ɪə/ and 'bar' carries /ɑː/."
+        },
+        {
+          "id": "eng-j24-07",
+          "topic": "Oral forms: stress",
+          "instruction": "Choose the option that has the stress on the correct syllable.",
+          "text": "Which of the following words is stressed on the second syllable?",
+          "options": ["PHOtograph", "deVELop", "INterest", "REGister"],
+          "answer": 1,
+          "explanation": "'Develop' is stressed de-VEL-op; the remaining words carry first-syllable stress."
+        },
+        {
+          "id": "eng-j24-08",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "No sooner had the lecture ended ______ the students rushed out of the hall.",
+          "options": ["when", "than", "then", "that"],
+          "answer": 1,
+          "explanation": "'No sooner' is paired with 'than'. 'Hardly/scarcely' pair with 'when'."
+        },
+        {
+          "id": "eng-j24-09",
+          "topic": "Idioms",
+          "instruction": "Choose the interpretation nearest in meaning to the underlined expression.",
+          "text": "The treasurer was asked to account for the missing funds, and he decided to face the music.",
+          "options": [
+            "attend the ceremony in person",
+            "accept the unpleasant consequences of his action",
+            "entertain the committee with a performance",
+            "appeal against the committee's decision"
+          ],
+          "answer": 1,
+          "explanation": "To face the music is to confront the unpleasant results of one's conduct."
+        },
+        {
+          "id": "eng-j24-10",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "Neither the head teacher nor the prefects ______ willing to take responsibility.",
+          "options": ["was", "were", "has been", "is"],
+          "answer": 1,
+          "explanation": "With 'neither ... nor', the verb agrees with the nearer subject. 'Prefects' is plural, so 'were' is correct."
+        },
+        {
+          "id": "eng-j24-11",
+          "topic": "Register: commerce",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The trader sold the goods at a price below cost and therefore recorded a ______.",
+          "options": ["discount", "loss", "rebate", "dividend"],
+          "answer": 1,
+          "explanation": "Selling below cost price yields a loss. A discount and a rebate are price reductions, while a dividend is a share of profit."
+        },
+        {
+          "id": "eng-j24-12",
+          "topic": "Antonyms",
+          "instruction": "Choose the option opposite in meaning to the word in capital letters.",
+          "text": "The new supervisor was praised for her CANDID assessment of the department.",
+          "options": ["frank", "evasive", "detailed", "generous"],
+          "answer": 1,
+          "explanation": "Candid means open and straightforward; evasive, which avoids the truth, is its opposite."
+        },
+        {
+          "id": "eng-j24-13",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "If he ______ harder last term, he would have qualified for the scholarship.",
+          "options": ["worked", "has worked", "had worked", "would work"],
+          "answer": 2,
+          "explanation": "The third conditional pairs 'had + past participle' in the if-clause with 'would have + past participle' in the main clause."
+        },
+        {
+          "id": "eng-j24-14",
+          "topic": "Oral forms: consonant sounds",
+          "instruction": "Choose the option that has the same consonant sound as the letters in capitals.",
+          "text": "meaSure",
+          "options": ["vision", "sugar", "assure", "mission"],
+          "answer": 0,
+          "explanation": "'Measure' and 'vision' both contain /ʒ/. The others contain /ʃ/."
+        },
+        {
+          "id": "eng-j24-15",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The delegates objected ______ the chairman's ruling on the motion.",
+          "options": ["against", "to", "on", "for"],
+          "answer": 1,
+          "explanation": "The verb 'object' takes the preposition 'to'."
+        },
+        {
+          "id": "eng-j24-16",
+          "topic": "Synonyms",
+          "instruction": "Choose the option nearest in meaning to the word in capital letters.",
+          "text": "Years of drought left the herdsmen in a PRECARIOUS position.",
+          "options": ["comfortable", "insecure", "temporary", "profitable"],
+          "answer": 1,
+          "explanation": "Precarious means unstable and dependent on chance, hence insecure."
+        },
+        {
+          "id": "eng-j24-17",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The two brothers shared the inheritance ______ themselves.",
+          "options": ["among", "between", "amongst", "within"],
+          "answer": 1,
+          "explanation": "'Between' is used for two parties; 'among' is used for more than two."
+        },
+        {
+          "id": "eng-j24-18",
+          "topic": "Register: law",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The accused pleaded not guilty, so the magistrate adjourned the case and granted him ______.",
+          "options": ["parole", "bail", "amnesty", "probation"],
+          "answer": 1,
+          "explanation": "Bail is the temporary release of an accused person awaiting trial. Parole and probation follow conviction."
+        },
+        {
+          "id": "eng-j24-19",
+          "topic": "Idioms",
+          "instruction": "Choose the interpretation nearest in meaning to the underlined expression.",
+          "text": "The minister's promise of free housing turned out to be a castle in the air.",
+          "options": [
+            "an ambitious building project",
+            "an unrealistic plan that cannot be achieved",
+            "a policy that was quietly withdrawn",
+            "an expensive government contract"
+          ],
+          "answer": 1,
+          "explanation": "A castle in the air is a daydream or a plan with no practical foundation."
+        },
+        {
+          "id": "eng-j24-20",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The report, together with the supporting documents, ______ submitted yesterday.",
+          "options": ["were", "have been", "was", "are"],
+          "answer": 2,
+          "explanation": "'Together with' does not change the number of the subject; 'the report' is singular, so 'was' is correct."
+        }
+      ]
+    },
+    {
+      "body": "WAEC",
+      "year": 2023,
+      "diet": "May/June",
+      "duration": 50,
+      "questions": [
+        {
+          "id": "eng-w23-01",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "Hardly had the bell rung ______ the pupils ran to the assembly ground.",
+          "options": ["than", "when", "before", "until"],
+          "answer": 1,
+          "explanation": "'Hardly' and 'scarcely' are completed by 'when'; only 'no sooner' takes 'than'."
+        },
+        {
+          "id": "eng-w23-02",
+          "topic": "Synonyms",
+          "instruction": "Choose the option nearest in meaning to the word in capital letters.",
+          "text": "The headmaster gave a LUCID explanation of the new grading system.",
+          "options": ["lengthy", "clear", "doubtful", "reluctant"],
+          "answer": 1,
+          "explanation": "Lucid means easily understood, that is, clear."
+        },
+        {
+          "id": "eng-w23-03",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "She is one of those pupils who ______ never late for class.",
+          "options": ["is", "are", "was", "has been"],
+          "answer": 1,
+          "explanation": "The relative pronoun 'who' refers to 'pupils', which is plural, so the verb is 'are'."
+        },
+        {
+          "id": "eng-w23-04",
+          "topic": "Antonyms",
+          "instruction": "Choose the option opposite in meaning to the word in capital letters.",
+          "text": "The elders found his conduct during the festival quite COMMENDABLE.",
+          "options": ["reprehensible", "remarkable", "acceptable", "ordinary"],
+          "answer": 0,
+          "explanation": "Commendable conduct deserves praise; reprehensible conduct deserves blame."
+        },
+        {
+          "id": "eng-w23-05",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The farmer would rather sell his yams than ______ them rot in the barn.",
+          "options": ["to let", "letting", "let", "lets"],
+          "answer": 2,
+          "explanation": "'Would rather ... than' is followed by the bare infinitive on both sides: 'sell ... than let'."
+        },
+        {
+          "id": "eng-w23-06",
+          "topic": "Oral forms: vowel sounds",
+          "instruction": "Choose the option that has the same vowel sound as the word in capital letters.",
+          "text": "WORK",
+          "options": ["fork", "bird", "back", "book"],
+          "answer": 1,
+          "explanation": "'Work' and 'bird' share the long vowel /ɜː/."
+        },
+        {
+          "id": "eng-w23-07",
+          "topic": "Idioms",
+          "instruction": "Choose the interpretation nearest in meaning to the underlined expression.",
+          "text": "When the auditors arrived unannounced, the storekeeper was caught red-handed.",
+          "options": [
+            "found injured at his post",
+            "discovered in the act of wrongdoing",
+            "questioned about a missing key",
+            "praised for his tidy records"
+          ],
+          "answer": 1,
+          "explanation": "To be caught red-handed is to be caught in the very act of doing something wrong."
+        },
+        {
+          "id": "eng-w23-08",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "The clerk apologised ______ keeping the visitors waiting.",
+          "options": ["of", "for", "on", "about"],
+          "answer": 1,
+          "explanation": "One apologises to a person for an action."
+        },
+        {
+          "id": "eng-w23-09",
+          "topic": "Register: agriculture",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "To restore the fertility of the exhausted plot, the farmer practised ______.",
+          "options": ["mulching", "crop rotation", "pruning", "weeding"],
+          "answer": 1,
+          "explanation": "Crop rotation restores soil nutrients by varying the crops grown on a plot from season to season."
+        },
+        {
+          "id": "eng-w23-10",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "Each of the candidates ______ required to submit two passport photographs.",
+          "options": ["are", "were", "is", "have been"],
+          "answer": 2,
+          "explanation": "'Each' is singular regardless of the plural noun that follows it."
+        },
+        {
+          "id": "eng-w23-11",
+          "topic": "Synonyms",
+          "instruction": "Choose the option nearest in meaning to the word in capital letters.",
+          "text": "The chief's decision to step down was entirely VOLUNTARY.",
+          "options": ["willing", "sudden", "temporary", "expected"],
+          "answer": 0,
+          "explanation": "Voluntary means done of one's own free will, hence willing."
+        },
+        {
+          "id": "eng-w23-12",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "By this time next year, she ______ her apprenticeship.",
+          "options": [
+            "will complete",
+            "will have completed",
+            "completes",
+            "would complete"
+          ],
+          "answer": 1,
+          "explanation": "An action finished before a stated future time takes the future perfect: 'will have completed'."
+        },
+        {
+          "id": "eng-w23-13",
+          "topic": "Antonyms",
+          "instruction": "Choose the option opposite in meaning to the word in capital letters.",
+          "text": "The rains this season have been ABUNDANT.",
+          "options": ["plentiful", "scanty", "steady", "unexpected"],
+          "answer": 1,
+          "explanation": "Abundant means more than enough; scanty means barely sufficient."
+        },
+        {
+          "id": "eng-w23-14",
+          "topic": "Lexis and Structure",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "It was the goalkeeper ______ saved the team from defeat.",
+          "options": ["which", "who", "whom", "whose"],
+          "answer": 1,
+          "explanation": "'Who' is the subject relative pronoun for a person; 'whom' would be the object form."
+        },
+        {
+          "id": "eng-w23-15",
+          "topic": "Register: medicine",
+          "instruction": "Choose the option that best completes the gap.",
+          "text": "Before the operation, the patient was given an ______ so that she would feel no pain.",
+          "options": ["antiseptic", "anaesthetic", "antibiotic", "analgesic"],
+          "answer": 1,
+          "explanation": "An anaesthetic removes sensation for surgery. An analgesic merely relieves pain while the patient stays conscious."
+        }
+      ]
+    }
+  ]
+}

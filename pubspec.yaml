@@ -1,0 +1,32 @@
+name: eduvora_prep
+description: "Eduvora Prep - JAMB, WAEC and NECO CBT practice for Nigerian secondary school students."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Local persistence for the profile, attempt history, bookmarks and streak.
+  shared_preferences: ^2.3.3
+
+  # British-English date and number formatting.
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/question_bank/
