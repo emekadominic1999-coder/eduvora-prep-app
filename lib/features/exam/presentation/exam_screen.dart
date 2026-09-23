@@ -142,6 +142,7 @@ class _ExamScreenState extends State<ExamScreen> {
       bodyCode: paper.body.code,
       subjectId: paper.subjectId,
       year: paper.year,
+      label: paper.title,
       mode: widget.config.mode,
       correct: correct,
       total: _questions.length,

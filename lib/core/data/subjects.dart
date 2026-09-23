@@ -122,7 +122,19 @@ class Subjects {
     ),
   ];
 
+  /// Stands in for drills that pull across several subjects at once. It is
+  /// deliberately not in [all] — nobody sits "Mixed subjects" as a paper.
+  static const Subject mixed = Subject(
+    id: 'mixed',
+    name: 'Mixed subjects',
+    shortName: 'Mixed',
+    icon: Icons.shuffle_rounded,
+    colour: Color(0xFFF97316),
+    category: SubjectCategory.core,
+  );
+
   static Subject byId(String id) {
+    if (id == mixed.id) return mixed;
     return all.firstWhere(
       (Subject subject) => subject.id == id,
       orElse: () => all.first,

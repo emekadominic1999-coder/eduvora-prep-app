@@ -123,6 +123,7 @@ class PastPaper {
     required this.questions,
     required this.durationMinutes,
     this.diet = '',
+    this.synthetic = false,
   });
 
   final String id;
@@ -135,9 +136,16 @@ class PastPaper {
   final int durationMinutes;
   final List<Question> questions;
 
+  /// True for drills assembled at run time (quick, mixed, saved). These are
+  /// not real diets, so the year is left out of the label.
+  final bool synthetic;
+
   int get questionCount => questions.length;
 
-  String get label => diet.isEmpty ? '$year' : '$year $diet';
+  String get label {
+    if (synthetic) return diet;
+    return diet.isEmpty ? '$year' : '$year $diet';
+  }
 
   String get title => '${body.code} $label';
 }
@@ -217,6 +225,7 @@ class AttemptRecord {
     required this.bodyCode,
     required this.subjectId,
     required this.year,
+    required this.label,
     required this.mode,
     required this.correct,
     required this.total,
@@ -232,6 +241,8 @@ class AttemptRecord {
       bodyCode: json['bodyCode'] as String,
       subjectId: json['subjectId'] as String,
       year: json['year'] as int,
+      label: json['label'] as String? ??
+          '${json['bodyCode']} ${json['year']}',
       mode: json['mode'] as String == 'study'
           ? PracticeMode.study
           : PracticeMode.exam,
@@ -254,6 +265,10 @@ class AttemptRecord {
   final String bodyCode;
   final String subjectId;
   final int year;
+
+  /// How the paper is named on screen, e.g. "JAMB 2024" or "JAMB Quick drill".
+  final String label;
+
   final PracticeMode mode;
   final int correct;
   final int total;
@@ -273,6 +288,7 @@ class AttemptRecord {
         'bodyCode': bodyCode,
         'subjectId': subjectId,
         'year': year,
+        'label': label,
         'mode': mode.name,
         'correct': correct,
         'total': total,

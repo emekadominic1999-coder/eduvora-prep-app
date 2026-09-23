@@ -190,6 +190,7 @@ class SubjectPapersScreen extends StatelessWidget {
       subjectId: subject.id,
       year: DateTime.now().year,
       diet: 'Mixed drill',
+      synthetic: true,
       durationMinutes: (count * 0.75).ceil().clamp(5, 120),
       questions: pool.take(count).toList(),
     );

@@ -23,25 +23,27 @@ class AppCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Widget body = Container(
-      padding: padding,
+    final Widget content = Padding(padding: padding, child: child);
+
+    // The card colour lives on a Material rather than on the outer decoration
+    // so that ink splashes — and any ListTile placed inside — paint on top of
+    // it instead of behind it. The border goes in foregroundDecoration so the
+    // Material cannot cover it.
+    return Container(
       decoration: BoxDecoration(
-        color: colour ?? AppColours.surface,
         borderRadius: radius,
-        border: border,
         boxShadow: AppShadows.subtle,
       ),
-      child: child,
-    );
-
-    if (onTap == null) return body;
-
-    return Material(
-      color: Colors.transparent,
-      child: InkWell(
-        onTap: onTap,
+      foregroundDecoration: border == null
+          ? null
+          : BoxDecoration(borderRadius: radius, border: border),
+      child: Material(
+        color: colour ?? AppColours.surface,
         borderRadius: radius,
-        child: body,
+        clipBehavior: Clip.antiAlias,
+        child: onTap == null
+            ? content
+            : InkWell(onTap: onTap, borderRadius: radius, child: content),
       ),
     );
   }

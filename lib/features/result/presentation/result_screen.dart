@@ -83,7 +83,7 @@ class ResultScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: AppSpacing.xs),
                 Text(
-                  '${attempt.bodyCode} ${attempt.year}',
+                  attempt.label,
                   style: text.bodySmall?.copyWith(color: Colors.white60),
                 ),
                 const SizedBox(height: AppSpacing.lg),

@@ -194,7 +194,7 @@ class PerformanceScreen extends StatelessWidget {
                             style: Theme.of(context).textTheme.titleSmall,
                           ),
                           Text(
-                            '${attempt.bodyCode} ${attempt.year} · '
+                            '${attempt.label} · '
                             '${attempt.mode == PracticeMode.study ? 'Study' : 'Exam'} '
                             '· ${DateFormat('d MMM, HH:mm').format(attempt.takenAt)}',
                             style: Theme.of(context).textTheme.bodySmall,

@@ -239,7 +239,7 @@ class _QuickActions extends StatelessWidget {
 
   final StudentProfile profile;
 
-  void _quickDrill(BuildContext context, PracticeMode mode) {
+  void _quickDrill(BuildContext context) {
     final QuestionBank bank = QuestionBank.instance;
     final List<Question> pool = <Question>[
       for (final String id in profile.subjectIds)
@@ -260,9 +260,12 @@ class _QuickActions extends StatelessWidget {
     final PastPaper drill = PastPaper(
       id: 'quick-drill-${profile.targetBody.code.toLowerCase()}',
       body: profile.targetBody,
-      subjectId: profile.subjectIds.first,
+      subjectId: profile.subjectIds.length == 1
+          ? profile.subjectIds.first
+          : Subjects.mixed.id,
       year: DateTime.now().year,
       diet: 'Quick drill',
+      synthetic: true,
       durationMinutes: (count * 0.75).ceil().clamp(5, 60),
       questions: pool.take(count).toList(),
     );
@@ -279,7 +282,7 @@ class _QuickActions extends StatelessWidget {
             label: 'Quick drill',
             caption: '20 mixed questions',
             colour: AppColours.primary,
-            onTap: () => _quickDrill(context, PracticeMode.exam),
+            onTap: () => _quickDrill(context),
           ),
         ),
         const SizedBox(width: AppSpacing.md),
@@ -454,7 +457,7 @@ class _AttemptTile extends StatelessWidget {
                 children: <Widget>[
                   Text(subject.shortName, style: text.titleSmall),
                   Text(
-                    '${attempt.bodyCode} ${attempt.year} · '
+                    '${attempt.label} · '
                     '${DateFormat('d MMM').format(attempt.takenAt)}',
                     style: text.bodySmall,
                   ),

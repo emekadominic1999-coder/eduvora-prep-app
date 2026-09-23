@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../../../core/data/subjects.dart';
 import '../../../core/models/exam.dart';
 import '../../../core/state/app_state.dart';
 import '../../../core/theme/app_theme.dart';
@@ -95,9 +96,10 @@ class BookmarksScreen extends StatelessWidget {
       PastPaper(
         id: 'saved-drill',
         body: ExamBody.jamb,
-        subjectId: 'english',
+        subjectId: Subjects.mixed.id,
         year: DateTime.now().year,
         diet: 'Saved questions',
+        synthetic: true,
         durationMinutes: (count * 0.75).ceil().clamp(5, 60),
         questions: pool.take(count).toList(),
       ),
