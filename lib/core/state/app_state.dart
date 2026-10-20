@@ -1,87 +1,85 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/exam.dart';
-import '../models/student.dart';
 import '../services/question_bank.dart';
+import '../services/supabase_service.dart';
+import 'session_controller.dart';
 
-/// Single source of truth for the profile, attempt history, bookmarks and
-/// practice streak. Everything is persisted to [SharedPreferences] so the app
-/// keeps its memory offline and across restarts.
+/// Owns everything about the signed-in student's CBT activity: attempt
+/// history, bookmarks and the practice streak derived from them.
+///
+/// Unlike the profile (held by [SessionController]), this data lives
+/// entirely in Supabase — there is no local-only mode, because progress is
+/// meant to follow the student between devices once they have an account.
+/// A small in-memory cache keeps the UI responsive between network round
+/// trips; it is never the source of truth.
 class AppState extends ChangeNotifier {
-  AppState._(this._prefs);
+  AppState._();
 
-  static const String _kProfile = 'prep.profile';
-  static const String _kAttempts = 'prep.attempts';
-  static const String _kBookmarks = 'prep.bookmarks';
-  static const String _kStreakDays = 'prep.streak.days';
-  static const String _kStreakLast = 'prep.streak.last';
-
-  /// Attempts are capped so the store cannot grow without bound.
+  /// Attempts are capped client-side so a single student's history cannot
+  /// grow the in-memory list without bound.
   static const int _maxAttempts = 300;
 
-  final SharedPreferences _prefs;
-
-  StudentProfile _profile = const StudentProfile();
   List<AttemptRecord> _attempts = <AttemptRecord>[];
   Set<String> _bookmarks = <String>{};
-  int _streak = 0;
-  DateTime? _lastPractice;
+  bool _loaded = false;
+  bool _loading = false;
 
   static Future<AppState> create() async {
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    final AppState state = AppState._(prefs);
-    state._restore();
+    final AppState state = AppState._();
     await QuestionBank.instance.load();
     return state;
   }
 
-  void _restore() {
-    final String? profileRaw = _prefs.getString(_kProfile);
-    if (profileRaw != null) {
-      _profile = StudentProfile.fromJson(
-        jsonDecode(profileRaw) as Map<String, dynamic>,
-      );
-    }
+  bool get isLoaded => _loaded;
 
-    final String? attemptsRaw = _prefs.getString(_kAttempts);
-    if (attemptsRaw != null) {
-      _attempts = (jsonDecode(attemptsRaw) as List<dynamic>)
-          .map((dynamic e) =>
-              AttemptRecord.fromJson(e as Map<String, dynamic>))
+  String? get _userId => sessionController.profile?.id;
+
+  /// Loads attempts and bookmarks for the currently signed-in student. Safe
+  /// to call repeatedly — it is a no-op once loaded, unless [force].
+  Future<void> loadForCurrentUser({bool force = false}) async {
+    final String? userId = _userId;
+    if (userId == null || userId.isEmpty) return;
+    if (_loaded && !force) return;
+    if (_loading) return;
+    _loading = true;
+    try {
+      final List<Map<String, dynamic>> attemptRows =
+          await SupabaseService.client
+              .from('attempts')
+              .select()
+              .eq('user_id', userId)
+              .order('taken_at', ascending: false)
+              .limit(_maxAttempts);
+      _attempts = attemptRows
+          .map((Map<String, dynamic> row) => AttemptRecord.fromRow(row))
           .toList();
-    }
 
-    _bookmarks = (_prefs.getStringList(_kBookmarks) ?? const <String>[]).toSet();
-    _streak = _prefs.getInt(_kStreakDays) ?? 0;
-    final String? last = _prefs.getString(_kStreakLast);
-    _lastPractice = last == null ? null : DateTime.tryParse(last);
+      final List<Map<String, dynamic>> bookmarkRows =
+          await SupabaseService.client
+              .from('bookmarks')
+              .select('question_id')
+              .eq('user_id', userId);
+      _bookmarks = bookmarkRows
+          .map((Map<String, dynamic> row) => row['question_id'] as String)
+          .toSet();
+
+      _loaded = true;
+    } catch (error) {
+      debugPrint('[Eduvora Prep] failed to load student data: $error');
+    } finally {
+      _loading = false;
+      notifyListeners();
+    }
   }
 
-  // ---------------------------------------------------------------- profile
-
-  StudentProfile get profile => _profile;
-
-  bool get isOnboarded => _profile.onboarded;
-
-  Future<void> saveProfile(StudentProfile profile) async {
-    _profile = profile;
-    await _prefs.setString(_kProfile, jsonEncode(profile.toJson()));
+  /// Clears everything when the student signs out, so the next sign-in
+  /// starts from a clean slate rather than showing a stale cache.
+  void resetForSignOut() {
+    _attempts = <AttemptRecord>[];
+    _bookmarks = <String>{};
+    _loaded = false;
     notifyListeners();
-  }
-
-  Future<void> toggleSubject(String subjectId) async {
-    final List<String> next = List<String>.from(_profile.subjectIds);
-    if (next.contains(subjectId)) {
-      if (next.length <= 1) return; // keep at least one subject
-      next.remove(subjectId);
-    } else {
-      if (next.length >= 4) return; // JAMB allows four
-      next.add(subjectId);
-    }
-    await saveProfile(_profile.copyWith(subjectIds: next));
   }
 
   // --------------------------------------------------------------- attempts
@@ -106,7 +104,6 @@ class AppState extends ChangeNotifier {
     return (totalCorrect / answered) * 100;
   }
 
-  /// Average score across the most recent [count] attempts.
   double recentAverage({int count = 5}) {
     final List<AttemptRecord> recent = _attempts.take(count).toList();
     if (recent.isEmpty) return 0;
@@ -117,7 +114,6 @@ class AppState extends ChangeNotifier {
     return sum / recent.length;
   }
 
-  /// Per-subject accuracy, strongest first.
   List<MapEntry<String, double>> subjectRanking() {
     final Map<String, List<int>> tally = <String, List<int>>{};
     for (final AttemptRecord attempt in _attempts) {
@@ -136,7 +132,6 @@ class AppState extends ChangeNotifier {
     return ranked;
   }
 
-  /// Topics the student keeps losing marks on, weakest first.
   List<MapEntry<String, double>> weakTopics({int limit = 6}) {
     final Map<String, List<int>> tally = <String, List<int>>{};
     for (final AttemptRecord attempt in _attempts) {
@@ -157,36 +152,74 @@ class AppState extends ChangeNotifier {
   }
 
   Future<void> recordAttempt(AttemptRecord attempt) async {
+    // Local state updates unconditionally — a slow or absent connection must
+    // never cost the student their result screen, and this also means the
+    // app's own widget tests do not need a live backend.
     _attempts = <AttemptRecord>[attempt, ..._attempts];
     if (_attempts.length > _maxAttempts) {
       _attempts = _attempts.sublist(0, _maxAttempts);
     }
-    await _prefs.setString(
-      _kAttempts,
-      jsonEncode(_attempts.map((AttemptRecord a) => a.toJson()).toList()),
-    );
-    await _touchStreak(attempt.takenAt);
     notifyListeners();
+
+    final String? userId = _userId;
+    if (userId == null || userId.isEmpty) return;
+    try {
+      await SupabaseService.client.from('attempts').insert(
+            attempt.toRow(userId),
+          );
+    } catch (error) {
+      debugPrint('[Eduvora Prep] failed to save attempt: $error');
+    }
   }
 
   Future<void> clearHistory() async {
+    final String? userId = _userId;
     _attempts = <AttemptRecord>[];
-    await _prefs.remove(_kAttempts);
     notifyListeners();
+    if (userId == null || userId.isEmpty) return;
+    try {
+      await SupabaseService.client
+          .from('attempts')
+          .delete()
+          .eq('user_id', userId);
+    } catch (error) {
+      debugPrint('[Eduvora Prep] failed to clear history: $error');
+    }
   }
 
-  // --------------------------------------------------------------- bookmarks
+  // -------------------------------------------------------------- bookmarks
 
   Set<String> get bookmarks => Set<String>.unmodifiable(_bookmarks);
 
   bool isBookmarked(String questionId) => _bookmarks.contains(questionId);
 
   Future<void> toggleBookmark(String questionId) async {
-    if (!_bookmarks.remove(questionId)) {
+    final bool wasBookmarked = _bookmarks.contains(questionId);
+    if (wasBookmarked) {
+      _bookmarks.remove(questionId);
+    } else {
       _bookmarks.add(questionId);
     }
-    await _prefs.setStringList(_kBookmarks, _bookmarks.toList());
     notifyListeners();
+
+    final String? userId = _userId;
+    if (userId == null || userId.isEmpty) return;
+    try {
+      if (wasBookmarked) {
+        await SupabaseService.client
+            .from('bookmarks')
+            .delete()
+            .eq('user_id', userId)
+            .eq('question_id', questionId);
+      } else {
+        await SupabaseService.client.from('bookmarks').upsert(<String, dynamic>{
+          'user_id': userId,
+          'question_id': questionId,
+        });
+      }
+    } catch (error) {
+      debugPrint('[Eduvora Prep] failed to sync bookmark: $error');
+    }
   }
 
   List<Question> bookmarkedQuestions() {
@@ -199,41 +232,43 @@ class AppState extends ChangeNotifier {
 
   // ------------------------------------------------------------------ streak
 
-  int get streak => _streak;
+  /// Derived from the dates attempts were taken — no separate counter to
+  /// keep in sync. Counts consecutive days ending today or yesterday; any
+  /// earlier gap resets the count to zero.
+  int get streak {
+    if (_attempts.isEmpty) return 0;
+    final Set<DateTime> days = _attempts
+        .map((AttemptRecord a) => _dateOnly(a.takenAt))
+        .toSet();
+    final DateTime today = _dateOnly(DateTime.now());
 
-  DateTime? get lastPractice => _lastPractice;
-
-  /// True when the student has already practised today.
-  bool get practisedToday {
-    final DateTime? last = _lastPractice;
-    if (last == null) return false;
-    return _daysBetween(last, DateTime.now()) == 0;
-  }
-
-  Future<void> _touchStreak(DateTime when) async {
-    final DateTime? last = _lastPractice;
-    if (last == null) {
-      _streak = 1;
+    DateTime cursor;
+    if (days.contains(today)) {
+      cursor = today;
+    } else if (days.contains(today.subtract(const Duration(days: 1)))) {
+      cursor = today.subtract(const Duration(days: 1));
     } else {
-      final int gap = _daysBetween(last, when);
-      if (gap == 0) {
-        _streak = _streak == 0 ? 1 : _streak;
-      } else if (gap == 1) {
-        _streak += 1;
-      } else if (gap > 1) {
-        _streak = 1;
-      }
+      return 0;
     }
-    _lastPractice = when;
-    await _prefs.setInt(_kStreakDays, _streak);
-    await _prefs.setString(_kStreakLast, when.toIso8601String());
+
+    int count = 0;
+    while (days.contains(cursor)) {
+      count += 1;
+      cursor = cursor.subtract(const Duration(days: 1));
+    }
+    return count;
   }
 
-  static int _daysBetween(DateTime a, DateTime b) {
-    final DateTime start = DateTime(a.year, a.month, a.day);
-    final DateTime end = DateTime(b.year, b.month, b.day);
-    return end.difference(start).inDays;
+  DateTime? get lastPractice =>
+      _attempts.isEmpty ? null : _attempts.first.takenAt;
+
+  bool get practisedToday {
+    final DateTime? last = lastPractice;
+    if (last == null) return false;
+    return _dateOnly(last) == _dateOnly(DateTime.now());
   }
+
+  static DateTime _dateOnly(DateTime d) => DateTime(d.year, d.month, d.day);
 }
 
 /// Exposes [AppState] to the widget tree without a third-party package.

@@ -13,11 +13,26 @@ dependencies:
 
   cupertino_icons: ^1.0.8
 
-  # Local persistence for the profile, attempt history, bookmarks and streak.
+  # Backend: authentication, Postgres data API and storage for the portal
+  # (profiles, attempts, bookmarks, news, scholarships, forum, marketplace).
+  supabase_flutter: ^2.8.0
+
+  # Local cache of the signed-in session and the last-synced profile, so the
+  # app has something to show the instant it opens, before the network call
+  # resolves.
   shared_preferences: ^2.3.3
 
   # British-English date and number formatting.
   intl: ^0.19.0
+
+  # Stable identifiers for locally created records before they are synced.
+  uuid: ^4.5.1
+
+  # Marketplace photo uploads.
+  file_picker: ^8.1.4
+
+  # Opening scholarship and marketplace contact links.
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:

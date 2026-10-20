@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
 import '../../core/theme/app_theme.dart';
-import '../bookmarks/presentation/bookmarks_screen.dart';
+import '../community/presentation/community_screen.dart';
 import '../performance/presentation/performance_screen.dart';
 import '../practice/presentation/practice_screen.dart';
 import '../profile/presentation/profile_screen.dart';
 import 'presentation/home_screen.dart';
 
-/// The five-tab frame that holds the app together.
+/// The five-tab frame that holds the app together: Home, Practice (CBT),
+/// Community (forum + marketplace), Progress and Profile. Saved questions
+/// live inside Profile rather than taking a sixth nav slot.
 class HomeShell extends StatefulWidget {
   const HomeShell({super.key, this.initialIndex = 0});
 
@@ -23,8 +25,8 @@ class _HomeShellState extends State<HomeShell> {
   static const List<Widget> _tabs = <Widget>[
     HomeScreen(),
     PracticeScreen(),
+    CommunityScreen(),
     PerformanceScreen(),
-    BookmarksScreen(),
     ProfileScreen(),
   ];
 
@@ -51,14 +53,14 @@ class _HomeShellState extends State<HomeShell> {
               label: 'Practice',
             ),
             NavigationDestination(
+              icon: Icon(Icons.groups_outlined),
+              selectedIcon: Icon(Icons.groups_rounded),
+              label: 'Community',
+            ),
+            NavigationDestination(
               icon: Icon(Icons.insights_outlined),
               selectedIcon: Icon(Icons.insights_rounded),
               label: 'Progress',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.bookmark_border_rounded),
-              selectedIcon: Icon(Icons.bookmark_rounded),
-              label: 'Saved',
             ),
             NavigationDestination(
               icon: Icon(Icons.person_outline_rounded),

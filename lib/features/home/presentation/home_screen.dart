@@ -9,21 +9,32 @@ import '../../../core/models/exam.dart';
 import '../../../core/models/student.dart';
 import '../../../core/services/question_bank.dart';
 import '../../../core/state/app_state.dart';
+import '../../../core/state/session_controller.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/widgets/common.dart';
 import '../../exam/presentation/exam_setup_sheet.dart';
 import '../../practice/presentation/subject_papers_screen.dart';
+import '../../portal/presentation/portal_home_section.dart';
 import '../home_shell.dart';
 
 /// The dashboard: countdown, quick actions, the student's own subjects,
-/// recent attempts and the exam guide.
+/// recent attempts, the portal (news/scholarships/forum/marketplace) and
+/// the exam guide.
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final AppState state = AppScope.of(context);
-    final StudentProfile profile = state.profile;
+    return ListenableBuilder(
+      listenable: sessionController,
+      builder: (BuildContext context, Widget? _) => _buildBody(context, state),
+    );
+  }
+
+  Widget _buildBody(BuildContext context, AppState state) {
+    final StudentProfile profile =
+        sessionController.profile ?? const StudentProfile();
     final QuestionBank bank = QuestionBank.instance;
 
     return Scaffold(
@@ -94,6 +105,8 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: AppSpacing.xl),
             ],
+            const PortalHomeSection(),
+            const SizedBox(height: AppSpacing.xl),
             const SectionHeader(
               title: 'Exam guide',
               subtitle: 'How the exams work, and how to work them.',

@@ -278,9 +278,53 @@ class AttemptRecord {
   /// topic -> [correct, attempted]
   final Map<String, List<int>> topicScores;
 
+  /// From a row of the `attempts` table (snake_case, jsonb topic_scores).
+  factory AttemptRecord.fromRow(Map<String, dynamic> row) {
+    return AttemptRecord(
+      id: row['id'] as String,
+      paperId: row['paper_id'] as String,
+      bodyCode: row['body_code'] as String,
+      subjectId: row['subject_id'] as String,
+      year: row['year'] as int,
+      label: row['label'] as String? ??
+          '${row['body_code']} ${row['year']}',
+      mode: row['mode'] as String == 'study'
+          ? PracticeMode.study
+          : PracticeMode.exam,
+      correct: row['correct'] as int,
+      total: row['total'] as int,
+      secondsUsed: row['seconds_used'] as int,
+      takenAt: DateTime.parse(row['taken_at'] as String),
+      topicScores: <String, List<int>>{
+        for (final MapEntry<String, dynamic> entry
+            in (row['topic_scores'] as Map<String, dynamic>? ??
+                    <String, dynamic>{})
+                .entries)
+          entry.key: List<int>.from(entry.value as List<dynamic>),
+      },
+    );
+  }
+
   ExamBody get body => ExamBody.fromCode(bodyCode);
 
   double get percentage => total == 0 ? 0 : (correct / total) * 100;
+
+  /// For an insert into the `attempts` table. `id` is left out — the table
+  /// generates its own primary key — and `user_id` is added by the caller.
+  Map<String, dynamic> toRow(String userId) => <String, dynamic>{
+        'user_id': userId,
+        'paper_id': paperId,
+        'body_code': bodyCode,
+        'subject_id': subjectId,
+        'year': year,
+        'label': label,
+        'mode': mode.name,
+        'correct': correct,
+        'total': total,
+        'seconds_used': secondsUsed,
+        'taken_at': takenAt.toIso8601String(),
+        'topic_scores': topicScores,
+      };
 
   Map<String, dynamic> toJson() => <String, dynamic>{
         'id': id,

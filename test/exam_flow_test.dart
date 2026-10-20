@@ -1,29 +1,41 @@
 import 'package:eduvora_prep/core/models/exam.dart';
+import 'package:eduvora_prep/core/models/student.dart';
 import 'package:eduvora_prep/core/services/question_bank.dart';
 import 'package:eduvora_prep/core/state/app_state.dart';
+import 'package:eduvora_prep/core/state/session_controller.dart';
 import 'package:eduvora_prep/core/theme/app_theme.dart';
 import 'package:eduvora_prep/features/exam/presentation/exam_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
-/// Drives a real paper end to end: answer, submit, score, review.
+import 'test_support.dart';
+
+/// Drives a real paper end to end: answer, submit, score, review. The
+/// exam engine itself needs no backend — [AppState.recordAttempt] updates
+/// local state unconditionally and only best-effort syncs to Supabase — so
+/// this runs entirely offline, seeded with a fake signed-in profile.
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  late AppState state;
   late PastPaper paper;
 
   setUp(() async {
-    SharedPreferences.setMockInitialValues(<String, Object>{});
-    state = await AppState.create();
+    await resetTestState();
+    sessionController.setProfileForTest(
+      const StudentProfile(
+        id: 'test-user',
+        email: 'student@example.com',
+        name: 'Ada',
+        onboarded: true,
+      ),
+    );
     paper = QuestionBank.instance
         .forSubjectAndBody('mathematics', ExamBody.jamb)
         .first;
   });
 
   Widget wrap(Widget child) => AppScope(
-        state: state,
+        state: testAppState,
         child: MaterialApp(theme: AppTheme.light, home: child),
       );
 
@@ -88,12 +100,12 @@ void main() {
     expect(find.text('3/4'), findsOneWidget);
     expect(find.text('75%  ·  A1  ·  Excellent'), findsOneWidget);
 
-    expect(state.attempts, hasLength(1));
-    final AttemptRecord attempt = state.attempts.first;
+    expect(testAppState.attempts, hasLength(1));
+    final AttemptRecord attempt = testAppState.attempts.first;
     expect(attempt.correct, 3);
     expect(attempt.total, 4);
     expect(attempt.label, paper.title);
-    expect(state.streak, 1);
+    expect(testAppState.streak, 1);
 
     // The review button sits below the fold in the test viewport.
     await tester.scrollUntilVisible(

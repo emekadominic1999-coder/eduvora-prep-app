@@ -4,10 +4,9 @@ import '../../core/data/subjects.dart';
 import '../../core/models/exam.dart';
 import '../../core/models/student.dart';
 import '../../core/services/question_bank.dart';
-import '../../core/state/app_state.dart';
+import '../../core/state/session_controller.dart';
 import '../../core/theme/app_theme.dart';
 import '../../core/widgets/common.dart';
-import '../home/home_shell.dart';
 
 /// Three quick steps before the student reaches the dashboard: who they are,
 /// which exam they are sitting, and which subjects they are taking.
@@ -27,6 +26,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   ExamBody _body = ExamBody.jamb;
   final Set<String> _subjects = <String>{'english'};
   DateTime? _examDate;
+
+  @override
+  void initState() {
+    super.initState();
+    // Sign-up already captured the student's name; carry it across so they
+    // are not asked for it twice.
+    _name.text = sessionController.profile?.name ?? '';
+  }
 
   @override
   void dispose() {
@@ -59,9 +66,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 
   Future<void> _finish() async {
-    final AppState state = AppScope.read(context);
-    await state.saveProfile(
-      StudentProfile(
+    final StudentProfile current = sessionController.profile ??
+        const StudentProfile();
+    await sessionController.saveProfile(
+      current.copyWith(
         name: _name.text.trim(),
         level: _level,
         targetBody: _body,
@@ -70,10 +78,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         onboarded: true,
       ),
     );
-    if (!mounted) return;
-    Navigator.of(context).pushReplacement(
-      MaterialPageRoute<void>(builder: (_) => const HomeShell()),
-    );
+    // No navigation needed: the root widget swaps to the portal as soon as
+    // SessionController.status flips to AuthStatus.ready.
   }
 
   bool get _canContinue {
