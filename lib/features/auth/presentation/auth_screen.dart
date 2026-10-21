@@ -125,11 +125,15 @@ class _AuthScreenState extends State<AuthScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
-                  const PrepLogo(size: 56),
+                  const PrepLogo(size: 64),
                   const SizedBox(height: AppSpacing.lg),
                   Text(
                     _isSignIn ? 'Welcome back' : 'Create your account',
-                    style: text.headlineSmall,
+                    style: text.headlineMedium?.copyWith(
+                      color: AppColours.ink,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.6,
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: AppSpacing.xs),

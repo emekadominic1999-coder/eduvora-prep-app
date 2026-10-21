@@ -116,30 +116,81 @@ class _NewsCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextTheme text = Theme.of(context).textTheme;
     return AppCard(
+      padding: EdgeInsets.zero,
       onTap: () => Navigator.of(context).push(
         MaterialPageRoute<void>(builder: (_) => _NewsDetailScreen(item: item)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Row(
-            children: <Widget>[
-              Pill(item.category, colour: item.categoryColour),
-              const Spacer(),
-              Text(
-                DateFormat('d MMM').format(item.publishedAt),
-                style: text.bodySmall,
+          // A colour-led header band stands in for a photo — bold enough to
+          // give the feed the same visual weight as an image-led story card.
+          Container(
+            height: 64,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: <Color>[
+                  item.categoryColour,
+                  item.categoryColour.withValues(alpha: 0.72),
+                ],
               ),
-            ],
+            ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: AppSpacing.lg,
+              vertical: AppSpacing.sm,
+            ),
+            alignment: Alignment.centerLeft,
+            child: Row(
+              children: <Widget>[
+                const Icon(
+                  Icons.newspaper_rounded,
+                  color: Colors.white,
+                  size: 20,
+                ),
+                const SizedBox(width: AppSpacing.sm),
+                Expanded(
+                  child: Text(
+                    item.category.toUpperCase(),
+                    style: text.labelMedium?.copyWith(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.4,
+                    ),
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                Text(
+                  DateFormat('d MMM').format(item.publishedAt),
+                  style: text.labelSmall?.copyWith(color: Colors.white70),
+                ),
+              ],
+            ),
           ),
-          const SizedBox(height: AppSpacing.sm),
-          Text(item.title, style: text.titleSmall),
-          const SizedBox(height: 4),
-          Text(
-            item.summary,
-            style: text.bodySmall,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
+          Padding(
+            padding: const EdgeInsets.all(AppSpacing.lg),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  item.title,
+                  style: text.titleMedium?.copyWith(
+                    color: AppColours.ink,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  item.summary,
+                  style: text.bodySmall,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
           ),
         ],
       ),

@@ -146,7 +146,10 @@ class _Greeting extends StatelessWidget {
               Text('$_timeOfDay,', style: text.bodySmall),
               Text(
                 profile.firstName,
-                style: text.titleLarge,
+                style: text.headlineSmall?.copyWith(
+                  color: AppColours.ink,
+                  fontWeight: FontWeight.w800,
+                ),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),

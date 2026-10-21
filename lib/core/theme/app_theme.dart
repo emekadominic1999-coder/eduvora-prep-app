@@ -30,6 +30,32 @@ class AppColours {
   static const Color textMuted = Color(0xFF64748B);
   static const Color textFaint = Color(0xFF94A3B8);
 
+  /// Near-black used for bold editorial headlines — section titles, card
+  /// headlines, news titles — anywhere the page should read like a bold
+  /// headline rather than quiet body copy.
+  static const Color ink = Color(0xFF0B1120);
+
+  /// The pastel card-tint palette the portal cycles through, one colour per
+  /// card, so a row of entries reads as varied and alive rather than a wall
+  /// of identical white cards.
+  static const List<Color> cardTints = <Color>[
+    Color(0xFFFFE8D6), // peach
+    Color(0xFFE3E0FB), // lavender
+    Color(0xFFD9F2E6), // mint
+    Color(0xFFFDE2E7), // blush
+    Color(0xFFDCEEFC), // sky
+    Color(0xFFFFF3C4), // butter
+  ];
+
+  static const List<Color> cardTintForegrounds = <Color>[
+    Color(0xFFC2410C),
+    Color(0xFF5B21B6),
+    Color(0xFF047857),
+    Color(0xFFBE123C),
+    Color(0xFF0369A1),
+    Color(0xFF92400E),
+  ];
+
   static const Color border = Color(0xFFE2E8F0);
   static const Color borderStrong = Color(0xFFCBD5E1);
 
