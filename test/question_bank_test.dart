@@ -15,13 +15,17 @@ void main() {
     await bank.load();
   });
 
-  test('every subject with an asset loads at least one paper', () {
-    expect(bank.papers, isNotEmpty);
+  test('every subject asset parses, even while the bank is empty', () {
+    // The question bank was deliberately cleared so the user can repopulate
+    // it with their own verified past questions — an empty "papers": []
+    // array is the expected, valid state here, not a failure. This guards
+    // only that every asset still parses and keys to a known subject, so a
+    // syntax mistake in a freshly pasted paper is caught immediately.
     for (final Subject subject in Subjects.all) {
       expect(
         bank.forSubject(subject.id),
-        isNotEmpty,
-        reason: '${subject.id}.json produced no papers',
+        isA<List<PastPaper>>(),
+        reason: '${subject.id}.json failed to load',
       );
     }
   });

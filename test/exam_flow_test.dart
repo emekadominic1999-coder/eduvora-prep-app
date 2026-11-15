@@ -1,6 +1,5 @@
 import 'package:eduvora_prep/core/models/exam.dart';
 import 'package:eduvora_prep/core/models/student.dart';
-import 'package:eduvora_prep/core/services/question_bank.dart';
 import 'package:eduvora_prep/core/state/app_state.dart';
 import 'package:eduvora_prep/core/state/session_controller.dart';
 import 'package:eduvora_prep/core/theme/app_theme.dart';
@@ -9,6 +8,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'test_support.dart';
+
+/// Six fixture questions, enough to cover every scenario below (4 answered
+/// in the main run, 2 for study mode, 3 for the drill-labelling check).
+/// The exam engine's own behaviour is under test here, not the bundled
+/// content — the real question bank was deliberately cleared so the user
+/// can repopulate it with verified past questions, and this test must keep
+/// working regardless of what that bank currently holds.
+List<Question> _fixtureQuestions() {
+  return List<Question>.generate(6, (int i) {
+    return Question(
+      id: 'fixture-$i',
+      // Distinct per question so the result screen's topic breakdown never
+      // coincidentally duplicates the headline score text (every question
+      // sharing one topic would make its ratio equal the overall ratio).
+      topic: 'Fixture topic ${i + 1}',
+      text: 'Fixture question number ${i + 1}?',
+      options: const <String>['Correct', 'Wrong B', 'Wrong C', 'Wrong D'],
+      answerIndex: 0,
+      explanation: 'Fixture explanation for question ${i + 1}.',
+    );
+  });
+}
 
 /// Drives a real paper end to end: answer, submit, score, review. The
 /// exam engine itself needs no backend — [AppState.recordAttempt] updates
@@ -29,9 +50,14 @@ void main() {
         onboarded: true,
       ),
     );
-    paper = QuestionBank.instance
-        .forSubjectAndBody('mathematics', ExamBody.jamb)
-        .first;
+    paper = PastPaper(
+      id: 'fixture-jamb-mathematics-2024',
+      body: ExamBody.jamb,
+      subjectId: 'mathematics',
+      year: 2024,
+      durationMinutes: 27,
+      questions: _fixtureQuestions(),
+    );
   });
 
   Widget wrap(Widget child) => AppScope(

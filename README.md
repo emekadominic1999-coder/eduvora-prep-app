@@ -44,12 +44,15 @@ server, no data cost after install.
 
 ## The question bank
 
+Every bundled paper was cleared out deliberately — the bank now holds 14
+subjects with an empty `"papers": []` array each, waiting to be repopulated
+with verified real past questions rather than authored placeholders.
+
 | | |
 | --- | --- |
 | Subjects | 14 |
-| Papers | 28 |
-| Questions | ~400, every one with a written explanation |
-| Bodies | JAMB, WAEC, NECO |
+| Papers | 0 (being rebuilt with real content) |
+| Bodies supported | JAMB, WAEC, NECO |
 
 Subjects: Use of English, Mathematics, Physics, Chemistry, Biology, Economics,
 Government, Literature-in-English, Commerce, Financial Accounting, Christian
