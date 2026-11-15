@@ -16,6 +16,20 @@ class PracticeScreen extends StatelessWidget {
         .where((ExamBody body) => QuestionBank.instance.forBody(body).isNotEmpty)
         .toList();
 
+    // The bank can legitimately be empty — e.g. while real past questions
+    // are being added back in. A TabController needs at least one tab, so
+    // guard this rather than build one with zero tabs.
+    if (bodies.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: const Text('Past questions')),
+        body: const EmptyState(
+          icon: Icons.inbox_rounded,
+          title: 'No papers yet',
+          message: 'Past questions are being added. Check back soon.',
+        ),
+      );
+    }
+
     return DefaultTabController(
       length: bodies.length,
       child: Scaffold(
@@ -92,11 +106,11 @@ class _BodyTab extends StatelessWidget {
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),
           itemCount: subjects.length,
-          gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-            maxCrossAxisExtent: 220,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
             mainAxisSpacing: AppSpacing.md,
             crossAxisSpacing: AppSpacing.md,
-            childAspectRatio: 1.25,
+            childAspectRatio: 0.92,
           ),
           itemBuilder: (BuildContext context, int i) {
             final Subject subject = subjects[i];
@@ -106,46 +120,93 @@ class _BodyTab extends StatelessWidget {
               0,
               (int sum, PastPaper p) => sum + p.questionCount,
             );
-            return AppCard(
-              padding: const EdgeInsets.all(AppSpacing.md),
+            return _SubjectCard(
+              subject: subject,
+              papers: papers.length,
+              questions: questions,
               onTap: () => Navigator.of(context).push(
                 MaterialPageRoute<void>(
                   builder: (_) =>
                       SubjectPapersScreen(subject: subject, body: body),
                 ),
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Container(
-                    height: 38,
-                    width: 38,
-                    decoration: BoxDecoration(
-                      color: subject.colour.withValues(alpha: 0.12),
-                      borderRadius: AppRadii.sm,
-                    ),
-                    child: Icon(subject.icon, color: subject.colour, size: 20),
-                  ),
-                  const Spacer(),
-                  Text(
-                    subject.name,
-                    style: text.titleSmall,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                  const SizedBox(height: 4),
-                  Text(
-                    '${papers.length} '
-                    '${papers.length == 1 ? 'paper' : 'papers'} · '
-                    '$questions questions',
-                    style: text.bodySmall,
-                  ),
-                ],
-              ),
             );
           },
         ),
       ],
+    );
+  }
+}
+
+/// A full-bleed pastel subject card — title first, a solid-colour icon
+/// badge below it, then the paper/question count — matching the big
+/// tappable card style used throughout myschool.ng's own Study and Test
+/// tabs, adapted here to carry the extra detail those don't need to show.
+class _SubjectCard extends StatelessWidget {
+  const _SubjectCard({
+    required this.subject,
+    required this.papers,
+    required this.questions,
+    required this.onTap,
+  });
+
+  final Subject subject;
+  final int papers;
+  final int questions;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final TextTheme text = Theme.of(context).textTheme;
+    return Material(
+      color: subject.colour.withValues(alpha: 0.14),
+      borderRadius: AppRadii.lg,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.all(AppSpacing.md),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                subject.name,
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: text.titleSmall?.copyWith(
+                  color: AppColours.ink,
+                  fontWeight: FontWeight.w800,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.md),
+              Container(
+                height: 48,
+                width: 48,
+                decoration: BoxDecoration(
+                  color: subject.colour,
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(subject.icon, color: Colors.white, size: 24),
+              ),
+              const SizedBox(height: AppSpacing.sm),
+              Text(
+                papers == 0
+                    ? 'Coming soon'
+                    : '$papers ${papers == 1 ? 'paper' : 'papers'} · '
+                        '$questions questions',
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+                style: text.labelSmall?.copyWith(
+                  color: subject.colour,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

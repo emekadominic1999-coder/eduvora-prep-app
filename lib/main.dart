@@ -8,6 +8,7 @@ import 'core/state/app_state.dart';
 import 'core/state/session_controller.dart';
 import 'core/theme/app_theme.dart';
 import 'core/widgets/common.dart';
+import 'core/widgets/dot_grid_background.dart';
 import 'features/auth/presentation/auth_screen.dart';
 import 'features/home/home_shell.dart';
 import 'features/onboarding/onboarding_screen.dart';
@@ -37,6 +38,18 @@ class EduvoraPrepApp extends StatelessWidget {
         title: 'Eduvora Prep',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
+        // Paints the dot-grid backdrop once behind every route. Each
+        // Scaffold's own background is transparent (see AppTheme.light), so
+        // the dots show through consistently everywhere instead of being
+        // painted — and needing upkeep — on every screen individually.
+        builder: (BuildContext context, Widget? child) {
+          return Stack(
+            children: <Widget>[
+              const Positioned.fill(child: DotGridBackground()),
+              ?child,
+            ],
+          );
+        },
         home: const _Entry(),
       ),
     );

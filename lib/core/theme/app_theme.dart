@@ -173,7 +173,11 @@ class AppTheme {
     return ThemeData(
       useMaterial3: true,
       colorScheme: scheme,
-      scaffoldBackgroundColor: AppColours.background,
+      // Transparent rather than a solid colour: the dot-grid backdrop is
+      // painted once behind every route (see EduvoraPrepApp's
+      // MaterialApp.builder), and a solid scaffold background here would
+      // paint over it on every screen.
+      scaffoldBackgroundColor: Colors.transparent,
       canvasColor: AppColours.background,
       textTheme: textTheme,
       primaryTextTheme: textTheme,
